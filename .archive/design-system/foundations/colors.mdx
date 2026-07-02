@@ -1,0 +1,89 @@
+---
+title: "Colors"
+description: "Neutral ramp, brand accents, and semantic state colors"
+icon: "droplet"
+---
+
+All color tokens live in `colors_and_type.css`. Pull values from there — never invent hex codes.
+
+## Neutral scale
+
+Warm foundation, `05`–`100`. Neutrals dominate every layout.
+
+| Token | Hex | Usage |
+|---|---|---|
+| `--neutral-5` | `#0D0D0C` | Primary text, darkest ink |
+| `--neutral-10` | `#1A1917` | Dark mode page surface |
+| `--neutral-20` | `#33332F` | Body text, secondary text |
+| `--neutral-30` | `#4D4C48` | — |
+| `--neutral-40` | `#666560` | Meta, subtle, kickers |
+| `--neutral-50` | `#7F7E77` | Muted captions |
+| `--neutral-60` | `#99988F` | Separators |
+| `--neutral-70` | `#B2B1AA` | Dark mode muted |
+| `--neutral-80` | `#CCCBC4` | — |
+| `--neutral-90` | `#E5E5DF` | Dividers, secondary button fill |
+| `--neutral-95` | `#F2F2ED` | Raised sections, card hover |
+| `--neutral-98` | `#FAF9F5` | Page background (cream) |
+| `--neutral-100` | `#FFFFFF` | Card fill |
+
+## Orange scale
+
+High-energy accent, `20`–`90`. Core hue: **orange-50 `#ED4421`**.
+
+| Token | Hex |
+|---|---|
+| `--orange-20` | `#572330` |
+| `--orange-30` | `#7C3648` |
+| `--orange-50` | `#ED4421` |
+| `--orange-60` | `#FF5E3D` |
+| `--orange-80` | `#FFA894` |
+| `--orange-90` | `#FFCABD` |
+
+Use sparingly. Pair a lighter tint over a darker shade within the family. Never mix with blue in one composition.
+
+## Blue / teal scale
+
+Calmer accent, `20`–`90`. Core hue: **blue-50 `#089DBA`**.
+
+| Token | Hex |
+|---|---|
+| `--blue-20` | `#143F47` |
+| `--blue-30` | `#1E5F6B` |
+| `--blue-50` | `#089DBA` |
+| `--blue-60` | `#36ADC4` |
+| `--blue-80` | `#83D7E2` |
+| `--blue-90` | `#B3E8EF` |
+
+## Semantic state colors
+
+Product-UI only — **not** brand expression. Never mixed with brand accents in marketing.
+
+| State | Light | Dark |
+|---|---|---|
+| Success | `#087838` | `#15BA55` |
+| Error | `#C42829` | `#FF6B6B` |
+| Warning | `#7A6000` | `#FAC400` |
+| Info | `#3558A8` | `#7A9BE6` |
+
+## Text roles
+
+| Token | Light value | Usage |
+|---|---|---|
+| `--text-primary` | `neutral-5` | Display, h1–h3, stats |
+| `--text-secondary` | `neutral-20` | Lead paragraphs |
+| `--text-body` | `neutral-20` | Prose default |
+| `--text-muted` | `neutral-50` | Captions, card copy |
+| `--text-meta` | `neutral-40` | Mono kickers, dates |
+| `--text-subtle` | `neutral-40` | Nav inactive, footer |
+| `--text-link` | `#0E8AA4` | Inline prose links |
+| `--text-inverse` | `neutral-98` | Text on dark/color panels |
+
+## Surfaces
+
+| Token | Light value |
+|---|---|
+| `--surface-page` | `neutral-98` |
+| `--surface-raised` | `neutral-95` |
+| `--surface-card` | `neutral-100` |
+
+Dark mode overrides are scoped under `.dark` in `colors_and_type.css`.

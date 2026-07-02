@@ -1,0 +1,115 @@
+---
+title: "Spacing, radii, elevation, and motion"
+description: "4px spacing scale, corner radii, shadow system, and easing tokens"
+icon: "ruler-combined"
+---
+
+## Spacing scale
+
+4px base unit. Reference these tokens — never use arbitrary pixel values.
+
+| Token | Value |
+|---|---|
+| `--space-1` | `0.25rem` (4px) |
+| `--space-2` | `0.5rem` (8px) |
+| `--space-3` | `0.75rem` (12px) |
+| `--space-4` | `1rem` (16px) |
+| `--space-5` | `1.25rem` (20px) |
+| `--space-6` | `1.5rem` (24px) |
+| `--space-8` | `2rem` (32px) |
+| `--space-10` | `2.5rem` (40px) |
+| `--space-12` | `3rem` (48px) |
+| `--space-16` | `4rem` (64px) |
+| `--space-20` | `5rem` (80px) |
+| `--space-24` | `6rem` (96px) |
+
+Marketing sections use generous vertical rhythm: `py-12 → py-16 → py-24`.
+
+## Corner radii
+
+| Token | Value | Usage |
+|---|---|---|
+| `--radius-sm` | `4px` | Icon chips, tags |
+| `--radius` | `8px` | Buttons, inputs, cards (default) |
+| `--radius-lg` | `12px` | Larger panels |
+| `--radius-xl` | `16px` | Media, modals |
+| `--radius-2xl` | `24px` | Large feature panels |
+| `--radius-pill` | `9999px` | Badges, dots, pills |
+| `--media-frame-radius` | `8px` | Photography / product screenshots |
+
+## Elevation and shadow
+
+Shadow-as-border carries edges; soft elevation lifts floating elements.
+
+### Border shadow
+
+```css
+--shadow-border:
+  0 1px 2px -1px rgba(0,0,0,0.06),
+  0 2px 4px rgba(0,0,0,0.04);
+--shadow-border-line: 1px solid rgba(0,0,0,0.06);
+```
+
+Used on cards and inputs. In dark mode, shadow drops and a translucent white hairline (`rgba(255,255,255,0.08)`) carries the edge.
+
+### Floating shadow
+
+```css
+--shadow-floating:
+  0 10px 28px -12px rgba(13,13,12,0.22),
+  0 2px 8px -3px rgba(13,13,12,0.10);
+```
+
+Menus, popovers, tooltips — paired with translucent fill + `backdrop-blur`.
+
+### Modal shadow
+
+```css
+--shadow-modal:
+  0 2px 4px rgba(0,0,0,0.06),
+  0 8px 16px -4px rgba(0,0,0,0.12),
+  0 20px 40px -8px rgba(0,0,0,0.18);
+```
+
+Dialogs and elevated media.
+
+### CTA shadow
+
+```css
+--shadow-cta-orange:
+  inset 0 1px 0 0 rgba(255,255,255,0.24),
+  0 1px 2px -1px rgba(96,18,8,0.22),
+  0 14px 28px -18px rgba(237,68,33,0.68);
+```
+
+The single branded orange CTA. Gradient fill: vertical `#FF5E3D → #ED4421`.
+
+## Motion easing
+
+Reference these tokens — never inline `cubic-bezier` values.
+
+| Token | Value | Usage |
+|---|---|---|
+| `--ease-snappy` | `cubic-bezier(0.16, 1, 0.3, 1)` | Default ease-out, entrances, hovers (200–300ms) |
+| `--ease-spring` | `cubic-bezier(0.34, 1.2, 0.5, 1)` | Subtle overshoot — dots, badges, success |
+| `--ease-content` | `cubic-bezier(0.22, 1, 0.36, 1)` | Hero text, cards |
+| `--ease-exit` | `cubic-bezier(0.55, 0, 0.85, 0.1)` | Elements leaving |
+| `--ease-pulse` | `cubic-bezier(0.4, 0.6, 0.6, 1)` | Breathing loops |
+
+### Signature animations
+
+- `fade-in-up` — staggered entrances
+- `dot-pulse` — slow pulse on kicker dots
+- Scramble-in reveal on mono labels
+- Edge-faded marquees
+
+Everything honors `prefers-reduced-motion`.
+
+## Transparency and blur
+
+Reserved for floating chrome only:
+
+- Sticky header: `backdrop-blur` over a 96%-opaque surface
+- Floating menus/popovers: translucent fill + blur + floating shadow
+
+Not used decoratively elsewhere.

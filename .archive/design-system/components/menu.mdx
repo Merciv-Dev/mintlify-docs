@@ -1,0 +1,49 @@
+---
+title: "Checklist and floating menu"
+description: "Blue check items and glass floating menu pattern"
+icon: "list-check"
+---
+
+## Checklist
+
+Feature section checklists use blue check icons paired with body copy.
+
+| Element | Spec |
+|---|---|
+| Check icon | Lucide `check`, blue-50 color |
+| Item text | Die Grotesk, `--text-body` |
+| Spacing | 12px gap between icon and text, 16px between items |
+
+Checklists appear in alternating image/content feature sections with a blue kicker above the headline.
+
+## Floating menu
+
+Menus and popovers use the floating elevation tier:
+
+```css
+.menu {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-floating);
+  border-radius: var(--radius);
+  border: var(--shadow-border-line);
+}
+```
+
+### Menu row states
+
+| State | Background |
+|---|---|
+| Default | Transparent |
+| Hover / active | `neutral-95` |
+| Selected | Blue check icon + `neutral-95` fill |
+
+<Note>
+  Menu rows highlight to `neutral-95` on hover — never use an offset ring.
+</Note>
+
+## Transparency and blur
+
+Floating menus are one of the two places blur is used in the system (the other is the sticky header). Translucent fill + backdrop-blur + floating shadow.
+
+Not used decoratively elsewhere.

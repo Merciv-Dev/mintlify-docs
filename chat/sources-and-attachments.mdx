@@ -1,0 +1,48 @@
+---
+title: "Sources and attachments"
+description: "Point the assistant at specific files, folders, and web pages, or attach files directly to a message."
+icon: "paperclip"
+---
+
+By default the assistant chooses its own sources — your knowledge base, the web, and market intelligence. When you already know where the answer should come from, you can scope the question yourself or attach the files directly.
+
+## Add Sources
+
+The **Add Sources** button (the dashed plus above the composer) opens a search where you can pin your question to specific sources:
+
+- **Files** and **folders** from your [Knowledge](/knowledge/overview) library
+- **Web pages** — paste a URL to add it as a web link source
+
+Selected sources appear as removable chips above the composer. Source sets you've used before are remembered as recent **Sources** groups, so you can reapply the same scope in one click.
+
+Two shortcuts:
+
+- Typing **/** in the composer opens a quick menu to insert a web-page tag inline.
+- The **Web** toggle turns web search off entirely for a message — useful when you want the answer grounded only in your own documents.
+
+## Attaching files
+
+Attach files to a message three ways: click the **paperclip** button, drag and drop onto the composer, or paste a file.
+
+### Supported file types
+
+PDF, Word (doc/docx), PowerPoint (ppt/pptx), Excel (xls/xlsx), CSV, plain text, Markdown, HTML, XML, JSON, and images (jpg/jpeg/png/webp).
+
+### Limits
+
+- **5 files** per message
+- **25 MB** per file
+- **100 MB** combined per message
+
+Empty (0-byte) files and duplicates with the same file name are rejected. If some files in a batch fail validation, the valid ones still attach. On success, a toast confirms what was added, for example "Added 2 files · Total: 12.4MB".
+
+## Adding attachments to your private knowledge
+
+After you send a message with attachments the platform can index, a popup asks: **"Add N files to your private knowledge?"**
+
+- **Confirm** to add the files to your Personal Data in [Knowledge](/knowledge/uploading-files). Processing happens in the background and can take a few minutes; once indexed, future chats can find and cite them without re-attaching.
+- **Dismiss** to keep the files scoped to that message only.
+
+<Tip>
+Attach a file when it matters for one question. Add it to your private knowledge when you expect to keep asking about it.
+</Tip>

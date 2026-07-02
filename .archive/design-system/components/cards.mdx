@@ -1,0 +1,42 @@
+---
+title: "Benefit cards"
+description: "Icon chip + title + copy card pattern"
+icon: "rectangle-list"
+---
+
+Benefit cards present feature value in a scannable grid — icon chip, title, and supporting copy.
+
+## Anatomy
+
+| Element | Spec |
+|---|---|
+| Fill | `neutral-98` or `neutral-100` |
+| Radius | 8px (`--radius`) |
+| Border | `--shadow-border` (shadow-as-border) |
+| Opacity | 90% at rest, 100% on hover |
+| Icon chip | 32px Lucide icon on tinted `blue-80/25` square, 4px radius |
+| Title | Die Grotesk, `--text-primary` |
+| Copy | Die Grotesk, `--text-muted` |
+
+## Layout
+
+Cards sit in a responsive grid within a `neutral-95` band. Typical pattern: 3-column grid on desktop, stacking on mobile.
+
+## Hover behavior
+
+- Opacity lifts from 90% to 100%
+- Border darkens slightly via shadow shift
+- No colored left-border accents
+- No scale transforms on the card itself
+
+## Icon chips
+
+Benefit card icons use Lucide at 32px, rendered through the `Icon` wrapper. Common icons in the marketing vocabulary:
+
+- `git-merge` — synthesis
+- `infinity` — continuous monitoring
+- `route` — auditability
+- `activity` — real-time signals
+- `shield-check` — security
+
+See [Iconography](/components/iconography) for the full icon mapping.

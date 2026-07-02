@@ -1,0 +1,43 @@
+---
+title: "Input fields"
+description: "Recessed surface inputs with focus and error states"
+icon: "input-text"
+---
+
+Input fields use a recessed surface treatment — they sit below the page level rather than floating above it.
+
+## Default state
+
+```css
+.input {
+  background: var(--surface-raised); /* neutral-95 */
+  border: var(--shadow-border-line);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+```
+
+## Focus state
+
+On focus, the border intensifies and the field maintains its recessed fill. No offset ring — the border itself carries the focus indication.
+
+## Error state
+
+Error fields use `--color-error` for the border and an error message below in Die Grotesk at 13px. Semantic error colors are product-UI only.
+
+## Demo modal pattern
+
+The website UI kit's demo-request modal demonstrates the full input pattern:
+
+- Recessed fields with validation
+- Submit-phase spinner
+- Success state confirmation
+
+See [Website UI kit](/ui-kits/website) for the interactive implementation.
+
+## Labels
+
+Field labels use Die Grotesk at 14px, `--text-secondary`. Required indicators use `--color-error` sparingly.

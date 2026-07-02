@@ -1,0 +1,59 @@
+---
+title: "Design rules"
+description: "The five non-negotiable rules for Merciv brand expression"
+icon: "shield-check"
+---
+
+These five rules govern every Merciv interface, deck, and marketing asset. Breaking any of them produces off-brand work.
+
+## 1. Never mix orange and blue
+
+Orange (`#ED4421`) and blue/teal (`#089DBA`) are both brand accents, but they **never appear in the same composition**.
+
+Pair a hue within its own family or with neutrals. On a blue panel, use blue tints and neutrals. On an orange panel, use orange tints and neutrals.
+
+<Warning>
+  This is the single most important color rule in the system.
+</Warning>
+
+## 2. Neutrals dominate
+
+The warm neutral ramp (`neutral-05` through `neutral-100`) is the foundation of every layout. Brand accents are **sparse and deliberate** — heroes, CTAs, one feature family at a time.
+
+Avoid using opacity in place of a real neutral step. The only gradient in the system is the orange CTA fill.
+
+## 3. Never bold GT Pressura
+
+GT Pressura ships as **Regular only**. Bolding synthesizes a fake weight that looks wrong.
+
+Pin all display headings to `font-weight: 400`. Use size, tracking, and whitespace for hierarchy instead.
+
+```css
+.type-display {
+  font-family: var(--font-display);
+  font-weight: 400; /* never 700 */
+}
+```
+
+## 4. Dot grid = circles, one step off the surface
+
+The signature dot-grid background uses a **16px radial-dot lattice** (`.bg-dot-grid`). Dots are always circular and sit one neutral step off their surface:
+
+- `95` on `98`
+- `90` on `95`
+- `20` on `10`
+- `30` on its matching `20` panel
+
+Always edge-fade the grid with a linear mask so it never competes with content.
+
+## 5. No hype, no emoji, no AI-tells
+
+Merciv's voice comes from **conviction, not salesmanship**. Speed is proof of depth — never the headline.
+
+**Banned words:** revolutionary, game-changing, cutting-edge, disruptive, synergy, move the needle, "in today's rapidly evolving landscape," "deep dive" (noun), north star.
+
+**AI tells to remove:** delve, crucial, pivotal, tapestry, testament, underscore, showcase, leverage-as-filler, "not just X but Y" parallelisms, forced rule-of-three, em-dash overuse (max ~2 per piece).
+
+**Emoji:** none. Not part of the brand.
+
+See [Content voice](/content/voice) for the full writing guide.

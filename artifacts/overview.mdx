@@ -1,0 +1,85 @@
+---
+title: "Artifacts"
+description: "Versioned files and dashboards the assistant creates in chat, with their own page for viewing, editing, and sharing."
+icon: "layers"
+---
+
+Artifacts are the saved outputs the assistant produces during a conversation: documents, spreadsheets, presentations, markdown notes, HTML pages, images, PDFs, CSV data files, and interactive Canvas dashboards. Instead of living only inside a chat transcript, each artifact gets its own page where you can view it, download it, edit it by asking the assistant, share it with teammates, and browse its version history.
+
+You don't create artifacts manually. When the assistant produces a file or Canvas in a chat, it becomes an artifact automatically. See [Generated files](/chat/generated-files) for how files come out of chat.
+
+<Note>
+Canvas dashboards are available on select plans. Contact your Merciv representative if you don't see them.
+</Note>
+
+## Open an artifact
+
+- **From chat** — generated files appear as attachment cards on the assistant's message. Click one to open the full artifact page; on desktop, the conversation moves into a side panel so it stays visible.
+- **From Home or Recents** — use the **Artifacts** filter alongside Chats, Reports, and Galleries, then click an artifact to open it.
+
+The artifact page shows the latest version full-screen. Files render in the built-in viewer; Canvas dashboards render natively and can be edited in place.
+
+## Edit an artifact through chat
+
+Click the **Edit** (chat) button in the top bar. This attaches the artifact as a source in the chat side panel, so you can ask the assistant to modify it: "shorten the executive summary," "add a column for region," and so on.
+
+The assistant's edit is saved as a new version of the same artifact, not a copy. This requires **Can edit** or **Owner** permission. A just-edited artifact can take a couple of seconds to show the new version.
+
+<Note>
+If you and someone else (or the assistant) save changes to the same Canvas at the same time, the second save is rejected with a conflict instead of overwriting the other change. Retry your save.
+</Note>
+
+## Version history and restore
+
+Every change to an artifact creates a new version.
+
+<Steps>
+  <Step title="Open the history">
+    Click the **Version history** (clock) icon in the top bar. Versions are listed with their number, time, and author; a dot marks the current one. The list shows up to the 50 most recent versions.
+  </Step>
+  <Step title="View an older version">
+    Click a version. The page shows a "Viewing version N (read-only)" banner with **Restore** and **Back to current** buttons.
+  </Step>
+  <Step title="Restore it">
+    Click **Restore** (requires edit or owner permission). Restoring doesn't rewind history; it adds a new version that matches the selected snapshot, then returns you to the live document.
+  </Step>
+</Steps>
+
+## Share an artifact
+
+The person whose chat produced the artifact is its **Owner**. With edit or owner permission, click **Share** to open the share dialog:
+
+- **Share with users** — search for teammates and add them as **Viewer** ("Can view") or **Editor** ("Can edit"). The access list shows everyone with access and lets you change or remove roles.
+- **Public link** — a toggle that makes the artifact viewable by anyone with the link, no account required. Turning it on reveals a copyable link; turning it off shows "The public link no longer grants access" and old links stop working. The public page is strictly read-only: no editing, no version history, no sharing controls.
+
+<Note>
+Public artifact links are available on select plans. Contact your Merciv representative if you don't see the option.
+</Note>
+
+There is no option to share an artifact with your entire organization at once; use per-user sharing or the public link.
+
+## Download
+
+Click **Download** in the top bar to download the file. Text-based artifacts also offer a **Word Doc** export option.
+
+## Rename, move, and delete
+
+From the Home and Recents lists, artifacts support **Rename**, **Move to project**, and **Delete**.
+
+Delete is reversible: opening a deleted artifact shows a banner with the deletion date and a **Restore** button, visible to the owner only.
+
+## Limits
+
+- Canvas dashboards are capped at 2 MB of content; edits beyond that are rejected.
+- The version history list shows up to the 50 most recent versions.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Generated files" icon="file-output" href="/chat/generated-files">
+    How the assistant produces files in chat.
+  </Card>
+  <Card title="Projects" icon="folder" href="/projects/overview">
+    Organize artifacts alongside related work.
+  </Card>
+</CardGroup>

@@ -1,0 +1,47 @@
+---
+title: "Website UI kit"
+description: "High-fidelity click-through recreation of merciv.com"
+icon: "browser"
+---
+
+A high-fidelity, click-through recreation of the **merciv.com** marketing site, rebuilt from the production codebase (`Merciv-Dev/merciv-website`, Next.js + Tailwind).
+
+<Note>
+  This is a cosmetic recreation — real layout, type, color, motion, and the demo-request flow — not production code.
+</Note>
+
+## Run it
+
+Open `ui_kits/website/index.html`. Everything is React via in-browser Babel. Tokens come from `colors_and_type.css` + `fonts.css`. Site chrome from `website.css`.
+
+## What's interactive
+
+- **Request a demo** (header, hero, final CTA, footer) opens a modal with recessed fields, validation, a submit-phase spinner, and a success state
+- Header is sticky, blurs on scroll, and hides on scroll-down / reveals on scroll-up
+- Hero badge opens the demo flow
+- Cards lift on hover; kicker dots pulse
+
+## Components
+
+| File | Exports | Notes |
+|---|---|---|
+| `primitives.jsx` | `Icon`, `Container`, `Kicker`, `CtaButton`, `SecondaryLink` | `Icon` wraps Lucide; `CtaButton` is the one branded orange CTA |
+| `Header.jsx` | `Header` | Logo, centered nav, sign-in + CTA, scroll behavior |
+| `Hero.jsx` | `Hero`, `HeroDotGrid` | Dot-grid hero, announcement badge, display headline |
+| `ProductPreview.jsx` | `ProductPreview` | Deep Research result mock with sources + confidence |
+| `FeatureSection.jsx` | `FeatureSection` | Alternating image/content, blue kicker, checklist |
+| `Bands.jsx` | `BenefitCards`, `EnterpriseBand` | Neutral-95 cards band + orange-20 full-bleed band |
+| `Sections.jsx` | `UnifiedIntro`, `IndustryMarquee`, `FinalCTA`, `Footer` | Intro, category marquee, dark CTA, footer |
+| `DemoModal.jsx` | `DemoModal` | Request-a-demo flow |
+| `app.jsx` | — | Composition + state |
+
+## Fidelity notes
+
+- Icons are **Lucide** (the production set), loaded from CDN
+- Hero/product imagery on the real site is video/screenshots from Sanity; the kit uses a faithful **product-preview mock** so it is self-contained
+- Nav routes (Product, Enterprise, Blog) set active state but do not render separate pages — extend by adding page components that swap on `active`
+- For deeper fidelity (exact section copy, blog/case-study/compare templates), read `src/components` and `src/content/marketing-copy.ts` in the [website repo](https://github.com/Merciv-Dev/merciv-website)
+
+## Source of truth
+
+Production design tokens live in `tailwind.config.ts` + `src/app/globals.css` in the merciv-website repo. The design system's `colors_and_type.css` was pulled verbatim from those files.

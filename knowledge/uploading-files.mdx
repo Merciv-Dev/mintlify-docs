@@ -1,0 +1,80 @@
+---
+title: Uploading files
+description: Upload documents, spreadsheets, and images to Knowledge, and understand how processing works.
+icon: upload
+---
+
+Upload files to Knowledge so Merciv can search, summarize, and cite them in chat. Uploads run in the background, and each file is automatically processed before it can be used as a source.
+
+## Supported file types and limits
+
+The upload dialog accepts up to **50 files per batch**, with a maximum of **100 MB per file**. Supported formats:
+
+| Category | Extensions |
+|---|---|
+| PDF | .pdf |
+| Word | .doc, .docx |
+| PowerPoint | .ppt, .pptx |
+| Excel | .xls, .xlsx |
+| CSV | .csv |
+| Images | .jpg, .jpeg, .png, .webp |
+
+A few validation rules apply at selection time:
+
+- Empty (0-byte) files are rejected.
+- Files are checked against their actual content, not just their extension. A file that has been renamed to a different type (for example, a .zip renamed to .pdf) is rejected — re-export it from its source application instead.
+
+<Note>
+Plain text, Markdown, and similar text formats aren't accepted in the Knowledge upload, but you can attach them directly to a conversation. See [Sources and attachments](/chat/sources-and-attachments).
+</Note>
+
+Your organization also has a storage quota based on its plan. If you exceed it, uploads are blocked and a dialog shows your storage used against your limit — delete files you no longer need or see [Billing and plans](/admin/billing-and-plans).
+
+## Upload files
+
+<Steps>
+  <Step title="Open the upload dialog">
+    On the Knowledge page, click **Upload** in the file manager toolbar. If you're inside a folder, uploaded files land in that folder.
+  </Step>
+  <Step title="Add your files">
+    Drag files onto the dropzone, or click it to browse and pick files.
+  </Step>
+  <Step title="Choose visibility">
+    Organization admins can choose **Organization** or **Personal** with the visibility selector. For everyone else, uploads go to Personal Data.
+  </Step>
+  <Step title="Start the upload">
+    Click **Upload Files**. The dialog closes immediately and your files upload in the background.
+  </Step>
+</Steps>
+
+## The upload tray
+
+After you start an upload, a tray appears in the bottom-right corner showing a progress ring for each file. From the tray you can:
+
+- **Cancel** a file that's queued or still uploading.
+- **Retry** a failed upload. Retry only works in the same browser tab — after a page reload, you'll need to re-select the file and upload it again.
+- **Hide** the tray (uploads continue in the background) or **Clear** finished entries. Successful entries dismiss themselves after about 10 seconds.
+
+Uploads survive navigation within the app, but they're tied to the browser tab that started them — closing that tab interrupts any unfinished uploads.
+
+## Processing
+
+Once a file finishes uploading, Merciv processes it automatically: content is extracted page by page (including OCR and chart/table analysis for documents), summarized, and indexed. Processing happens in the background and typically takes a few minutes, depending on file size and complexity.
+
+While processing runs, you'll see:
+
+- A blue **Processing...** badge on the file's row, which turns to a green **Processed** badge when finished.
+- The **Processing** tab listing all in-flight files, with a count badge on the tab.
+- The **Files processing** banner at the top of the page showing overall progress.
+
+Text extraction supports English, Spanish, French, and Portuguese.
+
+<Note>
+Files that are still processing can't be selected as chat sources and won't appear in search results until processing completes.
+</Note>
+
+## If a file seems stuck
+
+Large or complex files can take longer than usual. If a file has been processing for more than 15 minutes, it's shown as failed (red, with an X) in the processing list. Occasionally a slow file recovers and completes on its own, but a file that stays failed needs attention from Merciv — contact your Merciv representative or support to have it reprocessed.
+
+For upload errors like "File too large," "Invalid file type," or a failed transfer, see [Common issues](/troubleshooting/common-issues).

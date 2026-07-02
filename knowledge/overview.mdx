@@ -1,0 +1,55 @@
+---
+title: Knowledge overview
+description: Knowledge is your document library — upload files so Merciv can reference them when answering your questions.
+icon: book-open
+---
+
+Knowledge is Merciv's document library. Upload your own files — research decks, survey data, call-center exports, spreadsheets — and Merciv processes each one so the assistant can search it, summarize it, and cite it when answering questions in [Chat](/chat/overview).
+
+Every file you upload is automatically processed in the background: its content is extracted, summarized, and indexed. Once processing finishes, the file becomes searchable and can be attached as a source to any conversation.
+
+<Note>
+Knowledge is available on select plans. If the **Knowledge** item in the navigation appears locked, click **Request Access** or contact your Merciv representative.
+</Note>
+
+## The Knowledge page
+
+Open **Knowledge** from the left navigation. The page works like a lightweight file manager, top to bottom:
+
+- A **Files processing** banner appears while files are being processed, with an aggregate progress bar and a count of files in the queue.
+- A **Recent Files** carousel shows your 12 most recently uploaded files with previews.
+- The file manager has four tabs: **Organization Data**, **Personal Data**, **Processing**, and **Archived**.
+
+Click any file to open the **File Details** drawer on the right, which shows a preview, an AI-generated summary, and file properties. See [Organizing and sharing](/knowledge/organizing-and-sharing) for details.
+
+## Organization Data vs. Personal Data
+
+Knowledge splits files into two areas:
+
+| Tab | Who can see it | Who can upload |
+|---|---|---|
+| **Organization Data** | Everyone in your organization | Organization admins |
+| **Personal Data** | Only you | Anyone |
+
+Personal Data is private by default — no one else in your organization can access it. Organization admins can also share individual files or folders with specific people, or move a file between private and organization-wide access. See [Organizing and sharing](/knowledge/organizing-and-sharing).
+
+## How the assistant uses Knowledge
+
+When you ask a question in [Chat](/chat/overview), you can attach specific files or folders as sources using the source picker in the message composer. The picker searches across every file and folder you have access to — both Organization Data and your Personal Data — and remembers your recently used source sets.
+
+A few things to know:
+
+- Files that are still processing can't be selected as chat sources and won't appear in search results until processing finishes.
+- Spreadsheets and CSVs get a data-oriented summary (columns, row counts, sample values) so the assistant can reason about their contents.
+- Knowledge holds uploaded files only. You can add a web page to a single conversation by pasting its URL into the chat source picker, but web pages aren't stored in Knowledge. See [Sources and attachments](/chat/sources-and-attachments).
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Uploading files" icon="upload" href="/knowledge/uploading-files">
+    Supported file types, size limits, and how background processing works.
+  </Card>
+  <Card title="Organizing and sharing" icon="folder-tree" href="/knowledge/organizing-and-sharing">
+    Folders, search, file details, sharing, and archiving.
+  </Card>
+</CardGroup>

@@ -1,0 +1,64 @@
+---
+title: "Galleries"
+description: "Generate AI images from prompts and refine them with region-based editing, organized in galleries."
+icon: "images"
+---
+
+Galleries are collections of AI-generated images. Create a gallery, describe the image you want, and Merciv generates it for you. Images are grouped by the prompt that produced them, and a built-in editor lets you select part of an image and regenerate just that region.
+
+<Note>
+Galleries and image generation are available on select plans. Contact your Merciv representative if you don't see the **New Gallery** option.
+</Note>
+
+## Create a gallery
+
+Click **New** at the top of the app and choose **New Gallery**. Merciv creates an "Untitled Gallery" and opens it. If you have a project open, the gallery is created inside that project.
+
+Rename the gallery by clicking its name on the page; a "Saved" indicator confirms the update. You can also find galleries later with the **Galleries** filter on Home and in Recents.
+
+## Generate images
+
+<Steps>
+  <Step title="Describe your image">
+    Type a prompt in the composer at the bottom of the gallery ("Describe your image...") and press Enter or the send arrow.
+  </Step>
+  <Step title="Optionally shape the output">
+    Next to the composer, you can attach reference images, pick colors, choose a style, and adjust settings such as image size. Once you've set parameters, **Save** and **Clear** buttons appear so you can store them as a reusable template.
+  </Step>
+  <Step title="Wait a moment">
+    Each generation produces two images. Placeholder tiles appear while generation runs in the background, and finished images replace them automatically. No refresh needed.
+  </Step>
+</Steps>
+
+You can queue more generations while one is running. Images are grouped in the gallery under the prompt that generated them, and clicking any image opens a full-size viewer with navigation between images.
+
+<Tip>
+If placeholder tiles seem stuck, refresh the page. The gallery reloads its latest images on open.
+</Tip>
+
+## Edit images
+
+The gallery header has a **Create / Edit** toggle. Switch to **Edit** to refine an existing image instead of generating a new one:
+
+1. Select the image you want to edit. It opens on a mask canvas; in galleries with multiple images, use the thumbnail sidebar or arrow keys to switch between them.
+2. Paint over the region you want to change using the **erase** and **restore** brushes. Adjust the brush size as needed, and use Cmd/Ctrl+Z to undo.
+3. Describe the change in the composer ("Describe the changes you want to make...") and submit. Merciv regenerates only the masked region, leaving the rest of the image untouched.
+
+If the gallery has no images yet, Edit mode shows "No Images to Edit — Generate some images first to start editing."
+
+## Manage galleries
+
+From the Home and Recents lists, galleries support **Rename**, **Move to project**, and **Delete**. Galleries created inside a project stay organized within that project — see [Projects](/projects/overview).
+
+Galleries don't have sharing controls; a gallery is accessible to its creator. If you open a gallery you don't have access to, you'll see "You don't have access to this gallery" and be returned home.
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Artifacts" icon="layers" href="/artifacts/overview">
+    Versioned files and dashboards from chat.
+  </Card>
+  <Card title="Projects" icon="folder" href="/projects/overview">
+    Keep galleries alongside related work.
+  </Card>
+</CardGroup>

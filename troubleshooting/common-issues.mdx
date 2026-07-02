@@ -1,0 +1,188 @@
+---
+title: "Common issues"
+description: "Symptoms, likely causes, and fixes for the issues Merciv users run into most often."
+icon: "wrench"
+---
+
+Most issues resolve with a retry or a page refresh — Merciv does much of its work in the background, and a dropped connection can make finished work look stuck. Work through the relevant section below. If a problem persists after the suggested steps, contact [hello@merciv.com](mailto:hello@merciv.com) with the page you were on, what you clicked, and the approximate time.
+
+## Uploads and file processing
+
+### A file is stuck on "Processing..."
+
+Files aren't usable by chat or search until background processing finishes. Processing normally takes a few minutes; large or scanned documents take longer because every page is processed individually.
+
+**What to try:**
+
+- Refresh the page — if your connection dropped mid-processing, the file may already be done and the screen just didn't update.
+- Wait a bit longer for large PDFs or decks. Some stalled files recover on their own within a retry window.
+
+A file that has been processing for more than 15 minutes is shown as failed (red) in the processing list. If a file stays stuck or shows as failed after 15–30 minutes, contact support with the file name — the Merciv team can re-run processing for you.
+
+### An upload failed
+
+"Could not upload" or "Failed to upload" usually means the transfer failed partway; any partial file is cleaned up automatically.
+
+**What to try:**
+
+- Use **Retry** in the upload tray. Retry only works before you reload the page, so retry first, refresh second.
+- If an upgrade dialog opens showing storage used versus your limit, your organization has reached its plan's storage quota. Delete files you no longer need, or contact your Merciv representative about your plan.
+- If you see "No active organization. Please refresh and try again," refresh the page and upload again.
+
+If uploads keep failing across retries and files, contact support.
+
+### A file was rejected before uploading
+
+Knowledge uploads are validated in your browser, so rejections are immediate:
+
+- **"Invalid file type"** — Knowledge accepts PDF, Word, PowerPoint, Excel, CSV, and images (jpg, jpeg, png, webp). Convert other formats before uploading. Plain-text files can still be attached directly in [chat](/chat/sources-and-attachments).
+- **"File too large"** — the limit is 100 MB per file. Split or compress larger files.
+- **"Too many files"** — upload batches are capped at 50 files. Split into multiple uploads.
+- **"...does not match its file type"** — the file's contents don't match its extension, usually because it was renamed or is corrupted. Re-export it from its source application.
+- **"Empty file"** — 0-byte files are rejected. Check that the file opens locally.
+
+Rejected files don't block the rest of the batch — valid files in the same selection still upload. See [Uploading files](/knowledge/uploading-files) for the full limits.
+
+## Chat
+
+### A response stalls or stops mid-stream
+
+Chat replies stream to your browser live, so a network interruption (laptop sleep, switching Wi-Fi) can cut the stream even though the answer finishes on Merciv's side.
+
+**What to try:**
+
+- Refresh the page. The completed response often appears.
+- If it doesn't, resend the message.
+- For Research mode, "still working" phrases after 30 seconds or so are normal — deep research runs for minutes, not seconds.
+
+If chat is unresponsive for everyone on your team at once, contact support — that points to a platform issue rather than your connection.
+
+### "Task failed" appears in a response
+
+A background task the assistant was running errored or was interrupted. Retry the request in the same chat. If the same request fails repeatedly, contact support with the chat and the prompt you used.
+
+### "File unavailable" on a file card
+
+The assistant referenced a file that never finished generating. Ask it to produce the file again in the same chat. If regeneration fails too, contact support.
+
+### "Unable to load file" or "File not found — The file may have expired or been removed"
+
+Links to chat files can expire. Return to the chat and open the file again; if the file is gone, re-run the request to regenerate it.
+
+### Attachment errors when sending a message
+
+Chat attachments are validated per message:
+
+- **Maximum 5 files** per message, **25 MB per file**, **100 MB combined**.
+- Duplicate file names, empty files, and unsupported types are rejected individually — the rest of your files still attach.
+
+Remove or resize attachments to fit the limits, then resend. See [Sources and attachments](/chat/sources-and-attachments).
+
+### "Failed to send message"
+
+The send didn't go through, usually a momentary network or service hiccup. Retry — it typically works on the second attempt. If you see "No active organization found," reload the page first.
+
+### "Upgrade to keep chatting"
+
+Your organization's platform access has lapsed, so sending messages (including [Playbook](/playbooks/overview) runs) is blocked. An organization admin should check **Settings → Billing & Plan**, or contact your Merciv representative.
+
+## Trackers and stories
+
+### A run shows Failed
+
+Hover the run's status for the reason. The most common: the tracker's topic was judged too vague or placeholder-like to research (for example, "test"). Edit the tracker with a concrete monitoring brief — a real topic or question — and run it again. If a well-formed tracker fails repeatedly, contact support.
+
+### A run shows Skipped
+
+Skipped is not an error. It means the run found no new topics for the period, or every candidate overlapped with stories the tracker already published — deduplication working as intended. If it happens often, broaden the topic, add sources, or lower the frequency. See [Managing trackers](/trackers/managing-trackers).
+
+### "Story generation triggered" but no story appears
+
+Story generation is background work that can take several minutes; the tracker page keeps checking for up to 30 minutes. Check the run's row on the tracker page — the run may still be going, or it may have ended Skipped. If a run shows Success but no story ever appears, contact support.
+
+### A scheduled run didn't happen
+
+Check, in order:
+
+- The tracker's status is **Active** (not Paused).
+- The card's "Next run" time — schedules fire on the hour and half hour in the tracker's timezone, so a run can be up to 30 minutes later than you expect.
+- The tracker isn't set to **Manual**, which never runs on its own.
+
+If an Active tracker with a valid schedule misses runs, contact support.
+
+### "You're tracking as much as this plan allows"
+
+Your organization has reached its plan's tracker limit. Archive trackers you no longer need, or contact your Merciv representative about a higher limit.
+
+### "Tracker not found"
+
+The tracker was deleted, the link is wrong, or you don't have access — organization trackers are visible only to organization admins. Archived trackers are permanently deleted after 30 days.
+
+## Sharing and access
+
+### "No access" when opening a link from a teammate
+
+What this means depends on what was shared:
+
+- **Chats can't be shared at all.** A chat is visible only to the person who created it. To share chat output, share the [generated artifact](/artifacts/overview) or create a [report](/reports/overview) instead.
+- **Projects, reports, and artifacts** must be shared with you explicitly. Ask the owner to open **Share** and add you.
+- **Wrong organization** — if you belong to more than one organization, confirm the right one is active. Content is scoped per organization.
+
+If the owner has shared the item with you and you still can't open it, contact support.
+
+### A public link stopped working
+
+Public links are controlled by the owner and stop working the moment sharing is turned off:
+
+- **Reports** — "Report Access Denied" means the share link is invalid or the report was set back to private. Ask the owner for a fresh link.
+- **Stories** — a story link shows "Story Not Available" when the story is private. Ask the owner to make it public.
+- **Artifacts** — "Artifact not available" means the public link was turned off or the artifact was removed. Ask the owner to re-enable the public link.
+
+A public link never confirms whether the item still exists — private, deleted, and nonexistent items all show the same message.
+
+### "You do not have permission to share this item"
+
+You have view-only access. Only editors and owners can share; ask the owner to upgrade your access to **Can edit**.
+
+### "The report is temporarily unavailable, you cannot edit this report"
+
+The collaborative editing session couldn't start, so the report opened read-only. Click **Refresh** in the banner. If the report stays read-only after several refreshes, contact support with the report link.
+
+## Account and login
+
+### Can't log in
+
+- **"Merciv is currently available for work email addresses"** — personal email domains (gmail and similar) are blocked. Click **Try another account** and sign in with your company email.
+- **Bounced back to the login page repeatedly** — the session is cleared automatically so the next attempt starts clean. Try once more; if the loop continues, contact support.
+- **Opening Merciv inside another app** (a link tapped in LinkedIn, Instagram, and similar in-app browsers) uses a full-page login instead of a popup. If login misbehaves there, open the link in your regular browser.
+
+### Stuck on "Check Your Email"
+
+Merciv requires email verification before you can enter the app. Check your inbox and spam folder for the verification email, click the link, then click **I've Verified My Email**. If the email never arrives, contact support. See [Getting access](/account/getting-access).
+
+### "You're on the waitlist!"
+
+You signed up without a pending invite, an approved email domain, or an invite code. Check that:
+
+- Any invite was sent to the **exact** email address you signed in with — aliases and misspellings don't match.
+- If you were given an invite code or signup link, you used it during signup.
+
+Otherwise ask an organization admin to invite you from **Settings → Members**, or contact your Merciv representative.
+
+### "You don't have access to any organizations yet"
+
+Your account exists but doesn't belong to an organization — typically after being removed from your only one. An organization admin needs to invite you.
+
+### A feature is missing from your navigation
+
+Some features — including Playbooks, Portfolio, Galleries, and certain chat options — are available on select plans and may not appear for your organization.
+
+<Note>
+If you expect a feature and don't see it, contact your Merciv representative. Feature availability is set per organization, so teammates at other companies may see options you don't.
+</Note>
+
+### "Looks like something went wrong." (full-screen error)
+
+The app hit an unexpected error. The Merciv team is notified automatically the moment it happens — you don't need to file a report for it to be seen.
+
+**What to try:** click **Go to home**, or refresh the browser. That recovers the session in most cases. A one-off occurrence needs no follow-up; if the crash repeats on the same page or action, contact support with the steps that trigger it.

@@ -1,0 +1,41 @@
+---
+title: "Dot-grid pattern"
+description: "Signature 16px radial-dot lattice background"
+icon: "grip"
+---
+
+The dot grid is Merciv's signature background motif — a quiet 16px radial-dot lattice that echoes the "M" symbol.
+
+## Implementation
+
+Apply via the `.bg-dot-grid` class. Dots are always **circular** and sit **one neutral step off** their surface:
+
+| Surface | Dot color |
+|---|---|
+| `neutral-98` page | `neutral-95` dots |
+| `neutral-95` raised | `neutral-90` dots |
+| `neutral-10` dark | `neutral-20` dots |
+| `orange-20` panel | `orange-30` dots |
+| `blue-20` panel | `blue-30` dots |
+
+## Edge fading
+
+Always dissolve the grid at the edges via a linear mask so it never competes with content. The grid should feel like atmosphere, not decoration.
+
+## Interactive heroes
+
+On marketing heroes, the dot grid is often interactive — dots respond to cursor proximity. This is a marketing-only treatment; product UI uses static grids.
+
+## Where to use
+
+- Hero sections on the marketing website
+- Inset image card placeholders (`.ph-light` in sales decks)
+- Background atmosphere on feature sections
+
+## Where not to use
+
+- Editorial intro decks (purely typographic — no dot patterns)
+- Dense data tables or product UI chrome
+- As a substitute for real neutral surface colors
+
+See [Design rules](/rules) rule #4 for the full dot-grid specification.

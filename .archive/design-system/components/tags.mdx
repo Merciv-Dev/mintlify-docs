@@ -1,0 +1,54 @@
+---
+title: "Badges and kickers"
+description: "Pulsing dot + mono label badge pattern"
+icon: "tag"
+---
+
+Badges and kickers are small uppercase mono labels that precede headlines and announce sections.
+
+## Kicker pattern
+
+```css
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-meta);
+}
+```
+
+Kickers appear above display headlines in marketing sections. They use GT Pressura Mono, UPPERCASE, with +0.7px tracking.
+
+## Pulsing dot badge
+
+The hero announcement badge pairs a pulsing dot with a mono label:
+
+| Element | Spec |
+|---|---|
+| Dot | 6px circle, brand accent color, `dot-pulse` animation |
+| Label | GT Pressura Mono, uppercase, `--text-meta` |
+| Container | Pill radius, subtle border, opens demo flow on click |
+
+The dot-pulse animation uses `--ease-pulse` easing for a slow breathing loop.
+
+## Scramble-in reveal
+
+Mono labels in hero sections use a scramble-in text reveal animation — characters resolve from random glyphs to the final label text. Honors `prefers-reduced-motion`.
+
+## Deck kickers
+
+In slide decks, kickers (called "eyebrows") are larger:
+
+| Property | Value |
+|---|---|
+| Font | GT Pressura Mono |
+| Size | 24px |
+| Tracking | +5px |
+| Color | `neutral-40` |
+| Position | Top-left at 48/48 margin |
+
+## Tags
+
+Small pill badges for categorization use `--radius-pill`, `neutral-95` fill, and mono label text at 11px.

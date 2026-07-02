@@ -1,0 +1,61 @@
+---
+title: "Buttons"
+description: "Orange CTA, secondary, and tonal button variants"
+icon: "square-check"
+---
+
+## Primary CTA — orange gradient
+
+The branded orange gradient is reserved for the **single primary conversion CTA** (e.g., "Request a demo").
+
+```css
+.btn-primary {
+  color: #faf9f5;
+  background-color: #ed4421;
+  background-image: linear-gradient(to bottom, #ff5e3d, #ed4421);
+  box-shadow: var(--shadow-cta-orange);
+  border-radius: var(--radius);
+  padding: 12px 18px;
+  font-family: var(--font-body);
+  font-size: 14px;
+}
+```
+
+### States
+
+| State | Behavior |
+|---|---|
+| Hover | `filter: brightness(0.94)`, lift `translateY(-1px)` |
+| Active / press | `transform: scale(0.96)` |
+| Default | Inset white highlight + soft orange drop shadow |
+
+The forward-arrow `arrow-right` Lucide icon rides the primary CTA.
+
+## Secondary button
+
+Flat fill on neutral-90, darkens to neutral-80 on hover. Used for "Learn more" and non-conversion actions.
+
+```css
+.btn-secondary {
+  background: var(--neutral-90);
+  color: var(--text-primary);
+}
+.btn-secondary:hover {
+  background: var(--neutral-80);
+}
+```
+
+## Tonal buttons
+
+Flat fills for use **on colored section backgrounds only**:
+
+| Variant | Fill | Surface |
+|---|---|---|
+| Tonal orange | `orange-30` | Orange panels (`orange-20`) |
+| Tonal blue | `blue-30` | Blue panels (`blue-20`) |
+
+Tonal buttons are flat — no gradient, no CTA shadow. They shift one fill step on hover.
+
+<Warning>
+  Only one orange gradient CTA per viewport. Do not use the gradient on tonal or secondary buttons.
+</Warning>

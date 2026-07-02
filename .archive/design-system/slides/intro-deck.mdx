@@ -1,0 +1,70 @@
+---
+title: "Intro deck"
+description: "Editorial typographic deck — 9 templates from Merciv-Decks.fig"
+icon: "presentation-screen"
+---
+
+The **editorial intro deck** is a minimal, typographic, cream presentation system with no imagery. Open `slides/index.html`.
+
+Source: `Merciv-Decks.fig` → page **EP-Slide-Dump**.
+
+## Canvas
+
+- **Size:** 1920×1080
+- **Margins:** 48px on every edge
+- **Ground:** cream `neutral-98` (`#FAF9F5`) — not white
+- **No dot patterns, no photography** — purely typographic and editorial
+
+## Type roles
+
+| Role | Font | Size | Notes |
+|---|---|---|---|
+| Eyebrow | GT Pressura Mono | 24px | UPPER, +5px tracking, `neutral-40`, top-left @48/48 |
+| Headline | GT Pressura | 96px | Line 1.2, −0.03em |
+| Cover title | GT Pressura | 120–144px | Line ~0.92, tight |
+| Subhead | Die Grotesk | 40px | Card values |
+| Body | Die Grotesk | 32px | `neutral-20` |
+| Body-sm | Die Grotesk | 24px | Dense rows |
+| Index num | GT Pressura Mono | 64px | `neutral-60`, −3px |
+
+GT Pressura is never bold — all headings pinned to weight 400.
+
+## Footer
+
+Every slide has a single-line row of widely-tracked uppercase mono labels pinned to the bottom:
+
+`MERCIV · INTRO DECK · APRIL 2026 · CONFIDENTIAL`
+
+Cells never wrap. Dark on cream, cream (`.on-dark`) on color slides.
+
+## Templates (in order)
+
+1. **Cover** — color ground (orange), 144px title, symbol mark top-right, partner/date
+2. **Section divider** — color ground (teal-dark), numbered eyebrow + big statement
+3. **Content** — eyebrow + 96px headline + lead paragraph
+4. **Big statement** — oversized headline, the "reframe" voice
+5. **Overview** — three stat cards (label + 96px value + note) over a full-width callout panel
+6. **Guiding principles** — title left, numbered hairline rows right
+7. **Use cases** — three tall callout cards (label + 40px value + body)
+8. **Timeline** — horizontal stops (eyebrow + 48px title + body)
+9. **Closing** — color ground (maroon), full wordmark, headline + body + contact block
+
+## Cover color variants
+
+Three grounds ship in Figma:
+
+| Ground | Token | Usage |
+|---|---|---|
+| Orange | `orange-50` | Primary cover |
+| Teal-dark | `blue-20` | Section dividers |
+| Maroon | `orange-20` | Closing slide |
+
+Swap the slide `background` and use `.on-dark` footer + the light-ink logo. **Never put a brand accent on a content (cream) slide.**
+
+## Cards and panels
+
+8px radius, `neutral-95` fill, `neutral-90` hairline border, 48px padding. Numbered lists use hairline top-borders (no fill).
+
+## Navigation
+
+Both decks share `deck-stage.js` — arrow keys, thumbnails, and print-to-PDF.

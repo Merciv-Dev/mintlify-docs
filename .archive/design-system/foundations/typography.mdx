@@ -1,0 +1,88 @@
+---
+title: "Typography"
+description: "Display, body, mono type families and the fluid type scale"
+icon: "font"
+---
+
+## Type families
+
+### GT Pressura Extended — display
+
+Headlines and large statements. Tight negative tracking (`-0.03em`), tight line-height (~1.1–1.2).
+
+<Warning>
+  GT Pressura ships Regular only. Never bold — pin display headings to `font-weight: 400`.
+</Warning>
+
+```css
+.type-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+```
+
+### Die Grotesk A — body and UI
+
+All body copy and interface text. 0% tracking, 120–150% line-height. Weights 300–700 available.
+
+```css
+.type-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+```
+
+| Weight | File | Usage |
+|---|---|---|
+| 300 | DieGrotesk-A-Light | Light body |
+| 400 | DieGrotesk-A-Regular | Default body/UI |
+| 400 italic | DieGrotesk-A-Italic | Emphasis |
+| 500 | DieGrotesk-A-Medium | Medium UI |
+| 600–700 | DieGrotesk-A-Bold | Strong UI emphasis |
+
+### GT Pressura Mono — labels
+
+Small uppercase kickers, meta, labels. 0 to +5% tracking.
+
+```css
+.type-mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+```
+
+## Fluid type scale
+
+Marketing and content use a fluid Major-Third-inspired ramp. Product chrome uses fixed 12 / 14 / 16px.
+
+| Token | Value | Usage |
+|---|---|---|
+| `--text-fluid-body` | `1rem` | Base body |
+| `--text-fluid-body-lg` | `clamp(1.125rem, 1rem + 0.5vw, 1.25rem)` | Large body |
+| `--text-fluid-body-xl` | `clamp(1.25rem, 1rem + 1vw, 1.5rem)` | XL body |
+| `--text-fluid-h3` | `clamp(1.125rem, 1rem + 0.5vw, 1.25rem)` | H3 |
+| `--text-fluid-h2` | `clamp(1.5rem, 1.25rem + 1.5vw, 2.25rem)` | H2 |
+| `--text-fluid-h2-lg` | `clamp(2rem, 1.5rem + 2.5vw, 2.5rem)` | Large H2 |
+| `--text-fluid-hero-title` | `clamp(2.125rem, 1.45rem + 2.75vw, 2.75rem)` | Hero title |
+| `--text-fluid-display` | `clamp(2.25rem, 1.5rem + 3vw, 3rem)` | Display |
+| `--text-fluid-display-lg` | `clamp(3rem, 2rem + 5vw, 4.5rem)` | Large display |
+| `--text-fluid-stat` | `clamp(1.125rem, 1rem + 0.75vw, 1.5rem)` | Stats |
+| `--text-fluid-marquee` | `clamp(1.5rem, 1rem + 2.5vw, 3rem)` | Marquee |
+
+## Hierarchy rules
+
+- Steps between levels are ~1.5–2x
+- Bigger headlines get more whitespace and fewer words
+- Mono kickers always precede display headlines in marketing sections
+- Sentence case everywhere except mono labels (UPPERCASE)
+
+## Semantic `.type-*` classes
+
+`colors_and_type.css` ships ready-to-use classes: `.type-display`, `.type-display-lg`, `.type-hero`, `.type-h2`, `.type-body`, `.type-body-lg`, `.type-mono`, and more. Use these in prototypes instead of writing one-off font rules.

@@ -1,0 +1,93 @@
+---
+title: "Quickstart"
+description: "Load tokens, fonts, and assets to build on-brand Merciv interfaces"
+icon: "rocket"
+---
+
+## Use the design system
+
+The single source of truth for tokens is `colors_and_type.css`. Load it alongside `fonts.css` in any HTML prototype or production codebase.
+
+```html
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="colors_and_type.css">
+```
+
+<Note>
+  Pull values from the token files — do not invent colors, spacing, or type sizes.
+</Note>
+
+## Folder structure
+
+```
+fonts.css                @font-face for the 3 brand families
+colors_and_type.css      Color, type, radii, spacing, shadow, motion + .type-* classes
+fonts/                   GT Pressura (Ext + Mono) woff2/woff; Die Grotesk A OTFs
+assets/                  Logo + symbol SVGs (dark-ink / light-ink)
+preview/                 Design system cards (foundations + components + brand)
+ui_kits/website/         High-fidelity click-through of the marketing site
+slides/                  Brand deck system (editorial + sales templates)
+templates/               Signal carousel and consumer signal poster
+```
+
+## Fonts
+
+Three type families power the system:
+
+| Family | Role | Usage |
+|---|---|---|
+| **GT Pressura Extended** | Display | Headlines, large statements — tight negative tracking |
+| **Die Grotesk A** | Body / UI | All body copy and interface text — 0% tracking |
+| **GT Pressura Mono** | Labels | Small uppercase kickers, meta, labels — +0.7px tracking |
+
+## Icons
+
+Merciv uses **[Lucide](https://lucide.dev)** icons. Link from CDN and render by name — never hand-draw or use emoji.
+
+```html
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<i data-lucide="git-merge"></i>
+<script>lucide.createIcons();</script>
+```
+
+## Brand marks
+
+Assets live in `assets/`:
+
+- `merciv-logo-dark-ink.svg` — wordmark for light surfaces
+- `merciv-logo-light-ink.svg` — wordmark for dark surfaces
+- `merciv-symbol-dark-ink.svg` / `merciv-symbol-light-ink.svg` — dot-lattice "M" symbol
+
+See [Logo](/brand/logo) and [Symbol mark](/brand/symbol) for usage rules.
+
+## Preview locally
+
+<Steps>
+  <Step title="Install the Mintlify CLI">
+    ```bash
+    npm i -g mint
+    ```
+  </Step>
+  <Step title="Start the docs preview">
+    ```bash
+    mint dev
+    ```
+    Open `http://localhost:3000` to browse the design system docs.
+  </Step>
+  <Step title="Open the website UI kit">
+    Open `ui_kits/website/index.html` in a browser for a click-through of merciv.com.
+  </Step>
+</Steps>
+
+## Agent skill
+
+For AI-assisted design work, invoke the `merciv-design` skill. It points agents to the README, token files, UI kit, and voice guidelines.
+
+<CardGroup cols={2}>
+  <Card title="Design rules" icon="shield-check" href="/rules">
+    The five non-negotiable brand rules.
+  </Card>
+  <Card title="Visual foundations" icon="palette" href="/foundations/overview">
+    Color, type, spacing, and motion overview.
+  </Card>
+</CardGroup>

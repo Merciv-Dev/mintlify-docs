@@ -1,0 +1,57 @@
+---
+title: "Iconography"
+description: "Lucide icons, stroke rules, and common vocabulary"
+icon: "icons"
+---
+
+Merciv uses **[Lucide](https://lucide.dev)** icons, rendered through a `MaterialIcon` wrapper that maps legacy Material Symbol names to Lucide components in production.
+
+## Rendering rules
+
+- Clean line icons with consistent stroke
+- Default size: **24px**
+- Benefit card chips: **32px** on a tinted square
+- Stroke width scales with size via an `icon-stroke` helper
+- **Never** use emoji or unicode as icons
+
+## CDN usage
+
+```html
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<i data-lucide="git-merge"></i>
+<script>lucide.createIcons();</script>
+```
+
+In the website UI kit, icons are wrapped in an `Icon` component in `primitives.jsx`.
+
+## Common vocabulary
+
+| Concept | Lucide name | Legacy mapping |
+|---|---|---|
+| Research | `search` | search |
+| Synthesis / merge | `git-merge` | merge |
+| Continuous | `infinity` | infinity |
+| Auditability | `route` | route |
+| Monitoring | `activity` | activity |
+| Sources | `globe` / `network` | public / hub |
+| Security | `shield-check` / `lock` | verified / lock |
+| Deliverables | `package-2` / `book-open` | inventory / menu_book |
+| Check | `check` | check |
+| Trend | `trending-up` | trending_up |
+| AI / sparkle | `sparkles` | auto_awesome |
+
+## CTA and navigation icons
+
+- `arrow-right` — rides the primary orange CTA button
+- `arrow-up-right` — marks external navigation links
+
+## Deck icons
+
+Sales deck modules support Lucide icons in kickers (`.klabel` with optional icon + breadcrumb) and checklist rows (`.checklist`).
+
+## Do not
+
+- Hand-draw custom icons
+- Use Material Symbols directly in new work
+- Mix icon styles (filled vs outlined)
+- Use emoji or unicode characters as icon substitutes

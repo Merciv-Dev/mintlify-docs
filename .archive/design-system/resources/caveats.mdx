@@ -1,0 +1,35 @@
+---
+title: "Caveats"
+description: "Known limitations and fidelity notes for this design system"
+icon: "triangle-exclamation"
+---
+
+## Fonts
+
+Die Grotesk ships as a variable font in production. In this design system it is mapped from discrete A-cut OTFs (Light/Regular/Italic/Medium/Bold). Italic and bold-italic exist in `uploads/` if needed.
+
+## Product app (Momentum)
+
+The `momentum-app` repo was not explored in depth and no app screens were attached. This system focuses on the **marketing website** as the primary high-fidelity surface.
+
+If you need an app UI kit, point to the `momentum-app` codebase or Figma files.
+
+## Figma pseudocode
+
+The Figma `.jsx` exports are illustrative pseudocode. Exact values were cross-checked against the live CSS tokens in `colors_and_type.css`, which win on conflict.
+
+## Website UI kit scope
+
+The website UI kit recreates the home surface and demo-request flow. Nav routes (Product, Enterprise, Blog) set active state but do not render separate pages. For blog, case-study, and compare templates, read the production repo directly.
+
+## Hero imagery
+
+The real site uses video and Sanity CMS screenshots for hero/product imagery. The UI kit uses a faithful product-preview mock so it remains self-contained.
+
+## Semantic colors in marketing
+
+Semantic state colors (success, error, warning, info) are for product UI only. They should never appear in marketing compositions or mixed with brand accents.
+
+## Token conflicts
+
+If a value in these docs conflicts with the production codebase (`merciv-website`), the production codebase wins. Report discrepancies and update `colors_and_type.css` accordingly.

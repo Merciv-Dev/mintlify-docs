@@ -1,0 +1,54 @@
+---
+title: "Source materials"
+description: "GitHub repos, Figma files, and reference links"
+icon: "book-open"
+---
+
+These are the upstream sources the design system was reconstructed from. Explore them for the most accurate, current implementations.
+
+## Website codebase
+
+**[Merciv-Dev/merciv-website](https://github.com/Merciv-Dev/merciv-website)**
+
+Design tokens in `tailwind.config.ts` + `src/app/globals.css`. Marketing components under `src/components/home` and `src/components/ui`. Copy in `src/content/marketing-copy.ts`.
+
+This is the primary source of truth for component implementations.
+
+## Brand voice and content
+
+**[pidg-merciv/merciv-brand](https://github.com/pidg-merciv/merciv-brand)**
+
+`skills/merciv-brand/references/`:
+
+- `style-guide.md` — tone and writing rules
+- `product-context.md` — platform capabilities and proof points
+- `brand-toolkit.md` — primitive tokens and brand rules
+
+## Pattern generator
+
+**[pidg-merciv/merciv-pattern-generator](https://github.com/pidg-merciv/merciv-pattern-generator)**
+
+Vanilla-JS dot-pattern generator — the brand's signature motif.
+
+## Figma files
+
+| File | Contents |
+|---|---|
+| **Merciv Brand Toolkit** | Logo system, icons, components, social banners, "Make sense of" device (75 frames) |
+| **Merciv-Decks.fig** | Editorial intro deck templates (EP-Slide-Dump) |
+| **Merciv-Sales-Decks.fig** | Image-rich sales deck templates (June-2026 + Enterprise-Security) |
+
+## Products / surfaces
+
+| Surface | Source of truth | UI kit in this system |
+|---|---|---|
+| Marketing website | `Merciv-Dev/merciv-website` | `ui_kits/website/` |
+| Brand toolkit | Figma + `pidg-merciv/merciv-brand` | Foundations + slides |
+| Product app (Momentum) | `pidg-merciv/momentum-app` | Not included — see [Caveats](/resources/caveats) |
+
+## Other repos
+
+Seen but not deeply used in this system:
+
+- `pidg-merciv/momentum-app` — the intelligence platform UI
+- `pidg-merciv/open-agents` — agent infrastructure

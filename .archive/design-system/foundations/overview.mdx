@@ -1,0 +1,100 @@
+---
+title: "Visual foundations"
+description: "Overall feel, color philosophy, type, backgrounds, cards, elevation, and layout"
+icon: "palette"
+---
+
+## Overall feel
+
+Engineered, calm, structured, modern. Neutrals dominate; accents are rare and deliberate. The aesthetic reads like precision instrumentation, not a hype-y SaaS gradient deck.
+
+## Color philosophy
+
+Grounded in a slightly-warm neutral ramp (`neutral-05` through `neutral-100`). Two brand accents:
+
+- **Orange `#ED4421`** — high-energy
+- **Blue/teal `#089DBA`** — calm
+
+<Warning>
+  Never mix orange and blue in the same composition. See [Design rules](/rules).
+</Warning>
+
+Brand accents are used *sparingly* — heroes, CTAs, one feature family at a time. Semantic colors (success/error/warning/info) are product-UI only, never brand expression.
+
+## Typography
+
+Three families define the hierarchy:
+
+| Family | Role | Notes |
+|---|---|---|
+| GT Pressura Extended | Display / headlines | Tight negative tracking, tight line-height |
+| Die Grotesk A | Body / UI | 0% tracking, 120–150% line-height |
+| GT Pressura Mono | Kickers / meta / labels | Uppercase, 0 to +5% tracking |
+
+Hierarchy steps ~1.5–2x; bigger headlines get more whitespace and fewer words.
+
+See [Typography](/foundations/typography) for the full type scale.
+
+## Backgrounds
+
+The signature is a quiet **dot grid** — a 16px radial-dot lattice (`.bg-dot-grid`) that echoes the "M" symbol. Often interactive on heroes, always dissolving at the edges via a linear mask.
+
+Solid brand panels use the darkest shades (`orange-20`, `blue-20`) for full-bleed color sections. No noisy gradients; the *only* gradient is the orange CTA fill.
+
+Real photography sits in rounded **media frames** (`--media-frame-radius: 8px`, clip-only, optional elevated shadow).
+
+## Cards
+
+Subtle by design:
+
+- Fill: `neutral-98` / `neutral-100`
+- Radius: 8px
+- Border: hairline `rgba(0,0,0,0.06)` via soft two-layer **shadow-as-border** (`--shadow-border`)
+- Rest at 90% opacity, lift to 100% on hover
+- No colored left-border accents
+
+In dark mode the shadow drops and a translucent white hairline carries the edge.
+
+## Elevation ladder
+
+| Level | Token | Usage |
+|---|---|---|
+| Border | `--shadow-border` | Cards, inputs |
+| Floating | `--shadow-floating` | Menus, popovers, tooltips — paired with translucent fill + backdrop-blur |
+| Modal | `--shadow-modal` | Dialogs, elevated media |
+| CTA | `--shadow-cta-orange` | Branded orange button — vertical gradient + inset highlight + soft drop shadow |
+
+## Borders and dividers
+
+Hairline `neutral-90` dividers (light) / `neutral-30` (dark). Section content separated by thin top-borders rather than heavy boxes.
+
+## Motion
+
+Calm and composite-friendly (opacity + transform only). Canonical easing tokens:
+
+- **snappy** — default entrances/hovers, 200–300ms
+- **spring** — subtle overshoot for micro-delight
+- **content** — hero/cards
+- **exit** — leaving
+
+Signature animations: `fade-in-up` staggered entrances, slow `dot-pulse` on kicker dots, scramble-in reveal on mono labels, edge-faded marquees. Everything honors `prefers-reduced-motion`.
+
+## Hover and press states
+
+- **Links:** subtle underline that intensifies, or `text-subtle → text-primary`, 300ms
+- **Buttons:** orange CTA lifts (`translateY -1px`) then deepens on hover; press scales to 0.96
+- **Tonal/secondary buttons:** shift one fill step
+- **Cards:** opacity 90→100 + border darkens slightly
+- **Menu rows:** highlight to `neutral-95` (never an offset ring)
+
+## Layout
+
+- Max content container: **1440px**
+- Prose column: **672px**
+- 12-col grid on marketing sections
+- Generous vertical rhythm (`py-12 → py-16 → py-24`)
+- Header is fixed/sticky and hides on scroll-down, reveals on scroll-up
+
+## Imagery
+
+Real product UI and warm, true-to-life photography in rounded frames — not illustration, not stock-y gradients, not 3D blobs.

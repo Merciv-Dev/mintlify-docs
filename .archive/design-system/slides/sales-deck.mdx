@@ -1,0 +1,63 @@
+---
+title: "Sales deck"
+description: "Image-rich templates — centered title and left/right splits"
+icon: "images"
+---
+
+The **image-rich sales deck** provides templates for presentations with photography and product imagery. Open `slides/sales-deck.html`.
+
+Source: `Merciv-Sales-Decks.fig` (June-2026 + Enterprise-Security).
+
+## Shared with intro deck
+
+- Canvas: 1920×1080, 48px margins
+- Cream `neutral-98` ground for content slides
+- Shared `deck.css` and `deck-stage.js` (arrow keys / thumbnails / print-to-PDF)
+- Same type roles and footer pattern
+
+Footer: `MERCIV · SALES DECK · CONFIDENTIAL`
+
+## Core templates
+
+### Centered title slide
+
+Full-bleed image with a flat 20% black scrim, centered 144px title, mono section number top-left, symbol top-right.
+
+Classes: `.slide-divider`, `.divider-title`, `.divider-num`
+
+### Left/right split
+
+Text column (eyebrow + 48px headline + body) with image filling the other half.
+
+| Variant | Class | Image treatment |
+|---|---|---|
+| Full-bleed | `.split-img` | Image fills half the slide edge-to-edge |
+| Inset | `.split-img--inset` | Image inset with rounded corners on cream slide |
+
+## Placeholder treatment
+
+| Class | Usage |
+|---|---|
+| `.ph-dark` | Full-bleed images — cream title reads on the scrim |
+| `.ph-light` | Inset image cards on cream slides — dot-grid placeholder |
+
+When adding real images: warm, in-motion, true-to-life photography — never stock-y or illustrated.
+
+## Supporting modules
+
+`deck.css` includes composable modules for building new slides:
+
+| Module | Class | Purpose |
+|---|---|---|
+| Kicker | `.klabel` | Eyebrow with optional Lucide icon + breadcrumb |
+| Icon chip | `.chip-icon` | Small tinted icon square |
+| Checklist | `.checklist` | Blue check rows |
+| Logo wall | `.wall` | Partner/customer logo grid |
+| Testimonial | `.t-card` | Quote card |
+| Image card | `.img-card` | Rounded media frame |
+| Text block | `.lblock` | Large typographic statement |
+| Comparison | `.cmp` | Side-by-side comparison table |
+
+## Photography guidelines
+
+Real product UI and warm, true-to-life photography in rounded frames. Not illustration, not stock-y gradients, not 3D blobs. Media frames use `--media-frame-radius: 8px`.
