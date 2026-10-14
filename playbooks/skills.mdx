@@ -1,0 +1,86 @@
+---
+title: "Skills"
+description: "Give the assistant reusable instructions it applies when relevant, or that you call up from the chat composer."
+icon: "puzzle"
+---
+
+A skill is a reusable set of instructions, such as your team's reporting format or a house style for competitor summaries. When a skill is enabled, the assistant applies it whenever it's relevant to your question. You can also point the assistant at a specific skill from the chat composer.
+
+Skills are different from [Playbooks](/playbooks/overview). A playbook is a form you fill in and run once. A skill shapes how the assistant works across your chats.
+
+<Note>
+Skills are available on select plans. If you don't see **Skills** in the sidebar, contact your Merciv representative.
+</Note>
+
+## Browse your skills
+
+Click **Skills** in the left sidebar. The counter next to the title shows how many skills you have enabled out of 20.
+
+Use the tabs to filter the list:
+
+- **All Skills** shows every skill you can use.
+- **Private** shows skills you created for yourself.
+- **Shared** shows personal skills other people have shared with you.
+- **Organization** shows skills available to everyone in your organization.
+
+Within each tab, skills are split into **Enabled** and **Available**. Each card shows who made the skill: **By Merciv** for skills Merciv maintains, **By** your organization's name for organization skills, **By you**, or **Shared by** and the name of the person who created it. Use **Search skills** to filter by name or description.
+
+Click a skill to see its description and turn it on or off.
+
+## Enable or disable a skill
+
+Use the toggle on a skill's card or in its details dialog. The assistant only uses enabled skills in chat.
+
+You can enable up to 20 skills at a time. If you hit the limit, you'll see **Skill limit reached**. Turn one off before enabling another. Each enabled skill takes up some of the assistant's attention, so a short list of well-chosen skills tends to work best.
+
+Some skills are maintained by Merciv and always on. They apply to every chat, don't count toward your limit, and don't appear in your list.
+
+## Use a skill in chat
+
+To have the assistant follow a specific skill for one message:
+
+1. In the chat composer, type **/** or **@**, or click the **+** button.
+2. Choose **Skills**, then pick a skill. You can keep typing to filter by name.
+3. The skill appears as a chip in your message. Finish your message and send it.
+
+The assistant reads that skill and follows it for your request. Make sure the skill is enabled first.
+
+## Create a skill
+
+<Steps>
+  <Step title="Open the upload dialog">
+    On the Skills page, click **Create skill**.
+  </Step>
+  <Step title="Choose who can use it">
+    Pick **Just me** to keep the skill private. Organization admins can also pick **My organization** to make it available to everyone in the organization.
+  </Step>
+  <Step title="Upload the skill file">
+    Drag in or select one file: a `SKILL.md` file, or a `.zip` or `.skill` package that contains a `SKILL.md` file. Packages can be up to 10 MB.
+  </Step>
+  <Step title="Create it">
+    Click **Create skill**. A personal skill is turned on automatically if you're under the 20-skill limit.
+  </Step>
+</Steps>
+
+The `SKILL.md` file must start with a YAML header that includes a `name` and a `description`:
+
+```markdown
+---
+name: Competitor summary format
+description: How to structure a one-page summary of a competitor's recent moves.
+---
+
+Start with a three-sentence overview...
+```
+
+The assistant reads the description to decide when the skill is relevant, so make it specific. Skill names must be unique among your skills, or among your organization's skills. If the name is taken, change `name` in the header and upload again.
+
+## Share, download, or delete a skill
+
+Open the menu on a skill's card:
+
+- **Share** lets you share a personal skill you created with other people in your organization. See [Sharing and permissions](/getting-started/sharing-and-permissions).
+- **Download** saves a copy of the skill package.
+- **Delete** removes the skill for everyone who can access it.
+
+You can share, download, and delete skills you created. Organization admins can also download and delete organization skills.

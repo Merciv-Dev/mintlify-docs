@@ -4,7 +4,7 @@ description: "Run pre-built, guided AI workflows that turn repeatable research t
 icon: "zap"
 ---
 
-Playbooks are guided workflows built by Merciv for repeatable research and analysis tasks — competitive intelligence, concept testing, and similar work. Instead of writing a long prompt from scratch, you pick a playbook, fill in a short form, and run it. Merciv executes the workflow and returns the answer in a chat conversation, where you can ask follow-up questions like any other chat.
+Playbooks are guided workflows built by Merciv for repeatable research and analysis tasks, such as competitive intelligence and concept testing. Instead of writing a long prompt from scratch, you pick a playbook, fill in a short form, and run it. Merciv runs the workflow and returns the answer in a chat conversation, where you can ask follow-up questions like any other chat.
 
 <Note>
 Playbooks are available on select plans. If you don't see **Playbooks** in the sidebar, contact your Merciv representative.
@@ -12,15 +12,21 @@ Playbooks are available on select plans. If you don't see **Playbooks** in the s
 
 ## Find a playbook
 
-Open **Playbooks** from the left sidebar, or use the **Playbooks** tab on the Home page. The Playbooks page has two tabs:
+You can open a playbook from three places:
 
-- **Discover** — the full catalog available to you. When you're browsing all categories, a featured section curated by Merciv appears at the top, followed by the full list. Playbooks are listed alphabetically and load as you scroll.
-- **Saved** — playbooks you or your organization have bookmarked, with a filter for **All saved**, **Saved by me**, and **Saved to Org**.
+- **The Playbooks page.** Click **Playbooks** in the left sidebar.
+- **The Home page.** Click the **Playbooks** tab below the prompt box to see the catalog as a grid, sorted by category.
+- **The chat composer.** Type **/** or **@** in the message box, or click the **+** button, then choose **Playbooks**. Keep typing to filter by name. You can also type a playbook's name right after **/** to find it in the search results.
+
+The Playbooks page has two tabs:
+
+- **Discover** shows the full catalog available to you. A **Featured playbooks** section curated by Merciv appears at the top, followed by the full list. Playbooks are listed alphabetically and load as you scroll.
+- **Saved** shows playbooks you or your organization have bookmarked. Use the filter button to switch between **All saved**, **Saved by me**, and **Saved to Org**.
 
 To narrow the catalog:
 
-- **Category filter** — choose from categories such as Brand Strategy, Competitive Intelligence, Concept Testing, Consumer Insights, Digital Audit, Ecommerce, Innovation, Pricing, Retail Strategy, Sales Enablement, Shopper Insights, Social Insights, and Trend Discovery.
-- **Search** — matches playbook titles, descriptions, and categories.
+- **Category filter.** Choose from Brand Strategy, Competitive Intelligence, Concept Testing, Consumer Insights, Digital Audit, Ecommerce, Innovation, Pricing, Retail Strategy, Sales Enablement, Shopper Insights, Social Insights, and Trend Discovery.
+- **Search playbooks.** Matches playbook titles, descriptions, and categories.
 
 <Tip>
 Search filters only the playbooks already loaded on the page. If you don't see a match, scroll down to load more of the catalog and search again.
@@ -28,26 +34,26 @@ Search filters only the playbooks already loaded on the page. If you don't see a
 
 ## Save a playbook
 
-Hover over a playbook card to reveal the bookmark button:
+On the Playbooks page, each card has a bookmark button. On the main list it appears when you hover over the card.
 
-- Anyone can choose **Save to my playbooks** to bookmark it for themselves.
+- Anyone can choose **Save to my playbooks** to bookmark a playbook for themselves.
 - Organization admins also see **Save to org**, which adds the playbook to the whole organization's Saved list.
 
-Saved playbooks appear under the **Saved** tab, scoped by the filter you choose.
+Saved playbooks appear under the **Saved** tab. You can only save playbooks from the Playbooks page, not from the Home tab.
 
 ## Run a playbook
 
 <Steps>
   <Step title="Open the playbook">
-    Click a playbook card. A dialog shows the playbook's title, category, and description alongside a **Configure this playbook** form.
+    Click a playbook card, or pick one from the composer menu. A dialog shows the playbook's title, category, and description alongside a **Configure this playbook** form.
   </Step>
   <Step title="Fill in the inputs">
     Depending on the playbook, inputs can include text fields, dropdowns, multi-select checkboxes (some with hints like "Choose 1-3"), and file uploads. Required fields are marked with an asterisk.
 
-    File uploads accept PDF, DOCX, PPTX, XLSX, CSV, and TXT files up to 25 MB each. Some playbooks cap the number of files per field.
+    File uploads accept PDF, DOCX, PPTX, XLSX, CSV, and TXT files up to 25 MB each. Each upload field takes up to 5 files and 100 MB in total, and some playbooks allow fewer files.
   </Step>
   <Step title="Add extra context (optional)">
-    Expand **Additional context** to add any extra instructions or constraints. This text is appended to the run.
+    Expand **Additional context** to add any extra instructions or constraints. This text is added to the run.
   </Step>
   <Step title="Run it">
     Click **Run Playbook**. The button shows a spinner while your files upload and the run is submitted.
@@ -58,17 +64,27 @@ Saved playbooks appear under the **Saved** tab, scoped by the filter you choose.
 Closing the dialog or switching to a different playbook clears everything you've entered, including uploaded files.
 </Warning>
 
+Playbooks always run in **Work** mode, whatever mode is selected in the composer. Sources you've selected in the composer aren't applied to the run. The playbook uses its own setup plus any files you upload in the form. See [Modes and output formats](/chat/modes-and-outputs) for what Work mode does.
+
 ## Where results land
 
 Playbook runs happen in [Chat](/chat/overview):
 
-- If you're not already in a chat, Merciv creates a new conversation and takes you to it.
-- If you run a playbook from inside a chat, the run is added to that conversation.
+- If you're not in a chat, Merciv starts a new conversation and takes you to it.
+- If you're in a chat, including when you launch a playbook from that chat's composer, the run is added to that conversation.
 
-Your run appears in the conversation as a card showing the playbook's title, category, and the values you entered. Merciv's answer arrives as a regular chat response, so everything you can do in chat applies — follow-up questions, generated outputs, and conversation history.
+Your run appears in the conversation as a card showing the playbook's category, title, and the values you entered. Merciv's answer arrives as a regular chat response, so everything you can do in chat applies: follow-up questions, generated files, and conversation history.
 
-Playbook runs use message credits the same way regular chat messages do.
+Playbook runs use credits the same way regular chat messages do. See [Billing and plans](/admin/billing-and-plans).
+
+## If something goes wrong
+
+- **"Failed to run playbook."** The run couldn't be submitted. Try again. If the playbook was updated while your dialog was open, close it and reopen the playbook.
+- **"\<Field\> is required"** or a hint like "Select 1-3 options." Fill in or adjust the flagged field.
+- **"Too many files"** or **"Total file size limit exceeded."** Remove files from that upload field, or use smaller files.
+- **"Failed to update saved playbook."** Try again. Only organization admins can save a playbook to the organization.
+- **"No playbooks yet"** on the Home tab means no playbooks are available to your organization yet. Contact your Merciv representative.
 
 ## Adding or changing playbooks
 
-The playbook catalog is curated by Merciv. There's no in-product way to create or edit playbooks — if you'd like a new playbook or a change to an existing one, contact your Merciv representative.
+Merciv curates the playbook catalog. You can't create or edit playbooks in the product. If you'd like a new playbook or a change to an existing one, email [hello@merciv.com](mailto:hello@merciv.com) or contact your Merciv representative.

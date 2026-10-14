@@ -1,55 +1,86 @@
 ---
 title: Knowledge overview
-description: Knowledge is your document library — upload files so Merciv can reference them when answering your questions.
+description: Knowledge is your document library — organize files into knowledge bases so Merciv can reference them when answering your questions.
 icon: book-open
 ---
 
-Knowledge is Merciv's document library. Upload your own files — research decks, survey data, call-center exports, spreadsheets — and Merciv processes each one so the assistant can search it, summarize it, and cite it when answering questions in [Chat](/chat/overview).
+Knowledge is Merciv's document library. Upload your own files — research decks, survey data, call-center exports, spreadsheets — into **knowledge bases**, and Merciv processes each one so the assistant can search it, summarize it, and cite it when answering questions in [Chat](/chat/overview).
 
-Every file you upload is automatically processed in the background: its content is extracted, summarized, and indexed. Once processing finishes, the file becomes searchable and can be attached as a source to any conversation.
+Every file you upload is processed automatically in the background: its content is extracted, summarized, and indexed. Once processing finishes, the file can be used as a source in any conversation.
 
 <Note>
 Knowledge is available on select plans. If the **Knowledge** item in the navigation appears locked, click **Request Access** or contact your Merciv representative.
 </Note>
 
-## The Knowledge page
+## Knowledge bases
 
-Open **Knowledge** from the left navigation. The page works like a lightweight file manager, top to bottom:
+A knowledge base is a top-level collection of files and folders with its own access setting. Use one base per topic, team, or project — for example, a base for brand tracking studies and another for competitor research.
 
-- A **Files processing** banner appears while files are being processed, with an aggregate progress bar and a count of files in the queue.
-- A **Recent Files** carousel shows your 12 most recently uploaded files with previews.
-- The file manager has four tabs: **Organization Data**, **Personal Data**, **Processing**, and **Archived**.
+Open **Knowledge** from the left navigation to see your bases as cards, each showing its file count and type. Tabs narrow the list:
 
-Click any file to open the **File Details** drawer on the right, which shows a preview, an AI-generated summary, and file properties. See [Organizing and sharing](/knowledge/organizing-and-sharing) for details.
+| Tab | What it shows |
+|---|---|
+| **All bases** | Every base you can access |
+| **Private** | Bases you created that aren't shared with the whole organization |
+| **Shared** | Bases a teammate created and shared with you |
+| **Organization** | Bases available to everyone in your organization |
 
-## Organization Data vs. Personal Data
+Use the search box to find a base by name. Click a card to open it.
 
-Knowledge splits files into two areas:
+<Tip>
+If your organization used Knowledge before knowledge bases were introduced, your earlier files are in two bases: **Org Knowledge Base** for organization-wide files and **Private Knowledge Base** for your private files.
+</Tip>
 
-| Tab | Who can see it | Who can upload |
+## Create a knowledge base
+
+<Steps>
+  <Step title="Start a new base">
+    On the Knowledge page, click **New knowledge base**. If you don't have any bases yet, click **Add knowledge**.
+  </Step>
+  <Step title="Name it and choose visibility">
+    Enter a **Base name** and pick a **Visibility**: **Private** (only you, until you share it) or **Organization** (everyone in your organization). Base names must be unique.
+  </Step>
+  <Step title="Create it">
+    Click **Create base**. Merciv opens the new base so you can start adding files.
+  </Step>
+</Steps>
+
+Only organization admins can create **Organization** bases. Anyone can create a **Private** base and later share it with specific people. See [Organizing and sharing](/knowledge/organizing-and-sharing#sharing-a-knowledge-base).
+
+## Who can see and change a base
+
+| Base type | Who can see it | Who can add and change files |
 |---|---|---|
-| **Organization Data** | Everyone in your organization | Organization admins |
-| **Personal Data** | Only you | Anyone |
+| **Private** | Only you | You |
+| **Shared** | You and the people it's shared with | You and people with **Full access** (editors) |
+| **Organization** | Everyone in your organization | Organization admins |
 
-Personal Data is private by default — no one else in your organization can access it. Organization admins can also share individual files or folders with specific people, or move a file between private and organization-wide access. See [Organizing and sharing](/knowledge/organizing-and-sharing).
+People with **View only** access (viewers) can open, download, and chat with files but can't upload, rename, move, or delete anything.
 
 ## How the assistant uses Knowledge
 
-When you ask a question in [Chat](/chat/overview), you can attach specific files or folders as sources using the source picker in the message composer. The picker searches across every file and folder you have access to — both Organization Data and your Personal Data — and remembers your recently used source sets.
+The assistant can draw on any knowledge you have access to. When you want an answer grounded in specific material, point the assistant at it:
+
+- **A whole base** — open the base and click **Chat** in the header. Merciv starts a new chat scoped to that base.
+- **Specific files or folders** — select them in a base and click **Chat with selected** in the toolbar that appears.
+- **From the chat composer** — type **@** to add a knowledge base, folder, or file to your message. See [Sources and attachments](/chat/sources-and-attachments).
 
 A few things to know:
 
-- Files that are still processing can't be selected as chat sources and won't appear in search results until processing finishes.
-- Spreadsheets and CSVs get a data-oriented summary (columns, row counts, sample values) so the assistant can reason about their contents.
-- Knowledge holds uploaded files only. You can add a web page to a single conversation by pasting its URL into the chat source picker, but web pages aren't stored in Knowledge. See [Sources and attachments](/chat/sources-and-attachments).
+- Files that are still processing can't be added to a chat and don't appear in chat search until processing finishes.
+- Spreadsheets, CSVs, and other data files are processed as tables, so the assistant can analyze their contents rather than just read them.
+- Knowledge holds files you upload. Web pages you add to a single conversation aren't stored in Knowledge, and tools you connect through [Integrations](/knowledge/integrations) are used live in chat rather than stored as files.
 
 ## Next steps
 
 <CardGroup cols={2}>
   <Card title="Uploading files" icon="upload" href="/knowledge/uploading-files">
-    Supported file types, size limits, and how background processing works.
+    Supported file types, size limits, and how processing works.
   </Card>
   <Card title="Organizing and sharing" icon="folder-tree" href="/knowledge/organizing-and-sharing">
-    Folders, search, file details, sharing, and archiving.
+    Folders, search, file previews, sharing, and deleting.
+  </Card>
+  <Card title="Integrations" icon="plug" href="/knowledge/integrations">
+    Connect the tools your team already uses.
   </Card>
 </CardGroup>

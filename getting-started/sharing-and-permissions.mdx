@@ -8,15 +8,31 @@ Everything you create in Merciv lives inside your organization and is **private 
 
 ## Per-user sharing
 
-The share dialog is the same across projects, reports, stories, artifacts, and Knowledge files and folders. Open it from the **Share** action on an item, search for teammates by name, choose **Viewer** or **Editor**, and click **Add Users**.
+Projects, reports, stories, and artifacts share through the same dialog. Galleries share the same way once they're inside a project. To share an item:
 
-- **Viewer** — can open and read the item.
-- **Editor** — can also modify it and share it with others.
+<Steps>
+  <Step title="Open the share dialog">
+    Choose **Share** from the item's **...** menu, or click **Share** on a project page.
+  </Step>
+  <Step title="Add people">
+    Click **Add emails to invite people**, then type or paste teammates' email addresses, or pick from the suggestions as you type. Only members of your organization can be added.
+  </Step>
+  <Step title="Choose their access and invite">
+    Pick **Full access** or **View only** from the access menu, then click **Invite**. New invites default to **Full access**.
+  </Step>
+</Steps>
+
+The dialog shows two access levels, plus the owner:
+
+- **Viewer** (shown as **View only**) — can open and read the item.
+- **Editor** (shown as **Full access**) — can also rename and modify it, move it to a project, and share it with others.
 - **Owner** — the creator; has full control, including delete. The owner's access can't be changed or removed.
 
-Only editors and owners can share an item — viewers see "You do not have permission to share this item." The access list in the dialog shows everyone with access; editors and owners can switch others between Viewer and Editor or remove them.
+Only editors and owners can share an item — viewers see "You do not have permission to share this item." Under **People with access**, editors and owners can switch others between **Full access** and **View only**, or choose **Remove access**.
 
-When you share something, the recipient gets an in-app notification in their **Inbox** linking to the item.
+**Copy link** at the bottom of the dialog copies the item's address. The link only works for people who already have access, unless you also turn on a [public link](#public-links).
+
+When you share something, the recipient gets a notification in their **Inbox** linking to the item.
 
 ### Project access levels
 
@@ -26,26 +42,28 @@ Projects use the same model with project-specific effects:
 - **Editor** — rename the project, edit its description and cover, create items inside it, and share it.
 - **Viewer** — read-only; no Share button, no editing.
 
-Sharing a project shares access to the work grouped inside it, which is the fastest way to give a teammate a whole body of related work at once. See [Projects](/projects/overview).
+Sharing a project also shares the reports, galleries, and artifacts inside it. Project viewers can view them, and project editors can edit them. Only each item's own owner can delete it.
+
+**Chats are the exception.** A chat stays private to the person who created it, even inside a shared project. See [Projects](/projects/overview).
 
 ## Organization-wide sharing
 
 Two places support making something visible to your whole organization:
 
-- **Stories** — organization admins see an "Everyone at [organization]" toggle in a story's share dialog, granting view access to everyone in the organization.
-- **Knowledge files and folders** — the uploader can switch an item between **Private** and **Organization** access. See [Organizing and sharing](/knowledge/organizing-and-sharing).
+- **Stories** — organization admins see a **General access** setting in a story's share dialog. Switch it from **Only people invited** to **Anyone in the organization** to give everyone in the organization view access.
+- **Knowledge** — files, folders, and knowledge bases have their own organization-level sharing controls. See [Organizing and sharing](/knowledge/organizing-and-sharing).
 
-Projects, chats, reports, galleries, and artifacts do not have an organization-wide toggle — they are shared per-user only.
+Projects, chats, reports, galleries, and artifacts do not have an organization-wide option — they are shared per-user only.
 
 ## Public links
 
-Some items can be shared outside your organization with a view-only link that works without a Merciv account:
+Some items can be shared outside your organization with a view-only link that works without a Merciv account. In the share dialog, turn on **Anyone with the link** under **Public link**:
 
-- **Reports** — switch visibility to **Public** to generate a share link; anyone with the link can view the report. Switching back to Private expires the link immediately. See [Sharing and exporting reports](/reports/sharing-and-exporting).
-- **Stories** — organization admins can toggle "Anyone with the link" to publish a story publicly.
-- **Artifacts** — toggle a public link on an artifact's share menu.
+- **Reports** — any editor or owner can make a report public. See [Sharing and exporting reports](/reports/sharing-and-exporting).
+- **Stories** — only organization admins can make a story public.
+- **Artifacts** — any editor or owner can make an artifact public.
 
-Public-link visitors can only view — they can never edit.
+Turning the switch off makes the item private again immediately: the public link no longer grants access. Public-link visitors can only view — they can never edit.
 
 <Note>
   Public artifact links are available on select plans. Contact your Merciv representative if you don't see the option.
@@ -53,7 +71,7 @@ Public-link visitors can only view — they can never edit.
 
 ## What can't be shared
 
-**Chats are always private to their creator.** There is no share option on a chat, and no one else — including organization admins — can open your conversations. To share the outcome of a chat, share the artifact it produced or copy its content into a [report](/reports/overview).
+**Chats are always private to their creator.** There is no share option on a chat, and no one else — including organization admins or members of a shared project — can open your conversations. To share the outcome of a chat, share the artifact it produced or copy its content into a [report](/reports/overview).
 
 ## Roles in your organization
 
@@ -61,11 +79,11 @@ Public-link visitors can only view — they can never edit.
 - **Organization admin** — everything a member can do, plus organization settings: inviting and removing members, toggling other members' admin status, managing approved email domains, branding, billing, organization-wide story sharing, and public story links.
 - **Primary admin (owner)** — the organization's designated owner, with guaranteed billing access.
 
-Admins manage members and roles under **Settings → Members**. See [Managing your organization](/admin/managing-your-organization). Note that admin status doesn't bypass item privacy — a member's private items stay private.
+Admins manage members and roles from **Members** in the account menu, or under **Settings → Members**. See [Managing your organization](/admin/managing-your-organization). Note that admin status doesn't bypass item privacy — a member's private items stay private.
 
 ## Good to know
 
 - **Access changes apply in near-real time.** Someone who loses access to an open item may be redirected the next time it loads.
 - **Opening a link without access** shows "No access — You don't have access to this project" (or the equivalent for the item type) and returns you to Home. Ask the owner to share it with you.
 - **Sharing is organization-scoped.** Per-user sharing only reaches members of your organization; use public links to reach anyone else.
-- **Deleting is archiving.** Deleted projects, chats, reports, and galleries disappear from all lists and can't be restored self-service — contact support if you deleted something by mistake.
+- **Deleting can't be undone in the app.** Deleted projects, chats, reports, galleries, and artifacts disappear from all lists. If you delete something by mistake, email [hello@merciv.com](mailto:hello@merciv.com) as soon as possible.

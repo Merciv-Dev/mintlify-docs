@@ -4,57 +4,85 @@ description: "Ask questions in plain language and get cited answers drawn from y
 icon: "message-circle"
 ---
 
-Chat is where you work with the Merciv assistant. Ask a question in plain language and the assistant answers using your organization's knowledge base, the web, market intelligence and social data, and any files you attach — with citations so you can verify every claim.
+Chat is where you work with the Merciv assistant. Ask a question in plain language and the assistant answers using your organization's knowledge base, the web, market intelligence and social data, and any files you attach. Answers include citations so you can verify every claim.
 
 ## What the assistant can do
 
-Behind a single question, the assistant can:
+For a single question, the assistant can:
 
-- **Search your knowledge base** — the documents and data your team has uploaded to [Knowledge](/knowledge/overview).
-- **Search the web**, with the option to scope results to specific pages or turn web search off entirely (see [Sources and attachments](/chat/sources-and-attachments)).
+- **Search your knowledge base**, meaning the documents and data your team has added to [Knowledge](/knowledge/overview).
+- **Search the web and read specific pages**. You can point it at particular sites or turn web search off (see [Sources and attachments](/chat/sources-and-attachments)).
 - **Query market intelligence** and social media data.
-- **Query your portfolio database**, if your organization has [Portfolio](/portfolio/overview) brand data.
+- **Look up your brands and their metrics**, if your organization has [Portfolio](/portfolio/overview) brand data.
 - **Recall past conversations** and sources it has cited before.
-- **Analyze data and create files** — spreadsheets, slide decks, documents, and interactive visualizations (see [Generated files](/chat/generated-files)).
-- **Ask clarifying questions** — an inline form appears in the chat with Yes/No buttons or text fields. Answer the ones that help, or skip them.
-- **Propose Trackers** — when a question suggests ongoing monitoring, the assistant can offer an inline proposal you can accept to create a [Tracker](/trackers/overview).
-- **Run deep research** — in Research mode, the assistant produces a full formatted report with a generated cover illustration (see [Modes and outputs](/chat/modes-and-outputs)).
+- **Analyze data and create files**: spreadsheets, slide decks, documents, and interactive visualizations (see [Generated files](/chat/generated-files)).
+- **Create and edit images**: product and packaging concepts, marketing visuals, and illustrations. Ask for several options at once, or attach an image and ask for changes.
+- **Run deep research**: in **Deep research** mode, the assistant produces a full report you can trace back to its sources (see [Modes and outputs](/chat/modes-and-outputs)).
+- **Run a playbook**: pick one from the **/** menu to open its run dialog (see [Playbooks](/playbooks/overview)).
 
 <Note>
-Every chat screen carries the reminder that Merciv is AI and can make mistakes. Double-check cited sources before acting on an answer.
+Some capabilities are available on select plans: clarifying questions, [Tracker](/trackers/overview) proposals, and actions in connected apps. Contact your Merciv representative if you don't see them.
 </Note>
+
+Every chat screen reminds you that Merciv is AI and can make mistakes. Double-check cited sources before you act on an answer.
 
 ## Starting a chat
 
 You can start a conversation from several places:
 
-- Click the **New chat** plus button next to **Recent Chats** in the left navigation.
-- Type into the composer on the home page — this creates a new chat automatically.
-- Open the chat as a **side panel** over any page in the app. Use **Expand to Full Screen** and **Move to Side Panel** to switch between the panel and the full-screen view.
-- A brand-new chat shows a carousel of prompt templates you can click to get started.
+- Type into the composer on the home page. This creates a new chat and opens it full screen.
+- Click **New** in the top bar and choose **New Chat**.
+- Click **Open Chat** (the Merciv icon in the top bar) to open chat as a **side panel** over the page you're on. Use **Expand to full screen** and **Move to side panel** to switch between the two views. The side panel is available on desktop only.
+- A new chat lists a few prompt templates. Click one to fill in the composer.
 
-To send a message, type in the composer and press **Enter** (**Shift+Enter** adds a new line). A few things to know:
+To send a message, type in the composer and press **Enter**. Press **Shift+Enter** for a new line. On a phone or tablet, Enter adds a new line, so tap the send button to send.
 
-- Your chat is **named automatically** based on the conversation. You can rename it any time.
+A few things to know:
+
+- Merciv **names your chat automatically** based on the conversation. You can rename it at any time.
 - Messages are limited to 100,000 characters.
-- While the assistant is working, the send button becomes a **stop** control — click it to interrupt the response.
-- Longer tasks show rotating status phrases. Deep analysis can take a few minutes, so "Still working through this one..." after 30 seconds or so is normal.
+- While the assistant is working, the send button becomes a **stop** control. Click it to stop the response. You can type your next message right away; if you send it before the response has fully stopped, it goes out as soon as it does.
+- Select text in an answer to get a quick chat button that adds the selection to your next message.
 
 ## The activity timeline
 
-Each response includes an expandable **Activity** section showing the assistant's thinking and each action it took — searches it ran, files it read, code it executed. When the response finishes, the section reads **Activity · N actions**. Sticky indicators show running counts of sources, files, and to-dos as the assistant works.
+Each answer starts with a collapsible activity section. While the assistant works, it stays open and its header names the current step, such as "Searching web" or "Running code". In deep research, it can show several agents working in parallel, and you can expand each one to see its own steps.
 
-If something goes wrong mid-task, an inline **Task failed** indicator appears; sending the request again usually resolves it.
+When the answer starts, the section folds away. Its header then sums up the run, for example **Worked** with the time it took. Click the header to reopen the steps. Counts of sources, files, and to-dos stay visible in the top-right corner of the answer as the assistant works.
+
+Other states you might see in the header:
+
+- **Needs your input**: the assistant is waiting on you (see below).
+- **Stopped**: you stopped the response.
+- **Failed**: something went wrong. A **Task failed** notice also appears under the answer. Sending the request again usually resolves it.
+
+## When the assistant needs your input
+
+Sometimes the assistant pauses to check something with you before it continues. A card appears just above the composer:
+
+- **Questions**: answer one question at a time. Pick an option, type in **Something else**, upload a file, or click **Skip**. Then click **Next** or **Submit**.
+- **Tracker proposals**: review each suggested [Tracker](/trackers/overview), including its monitoring brief and schedule. Then click **Create** or **Skip**.
+- **Action approvals**: before the assistant changes anything in an app you've connected, it shows the action and waits for **Approve** or **Reject**. If you reject an action, it never runs. Read-only lookups don't need approval.
+
+After you respond, the card closes and a short summary stays in the activity timeline.
 
 ## Citations
 
-Answers include numbered citations, and a sources strip at the bottom of each message lists everything the assistant cited. When you copy an answer with **Copy Text**, the sources come with it.
+Answers cite their sources inline. Each citation shows the source's name, with a count when more than one source supports the same point. Click a citation to see the source. The sources chip under the answer lists everything the assistant cited. When you copy an answer with **Copy Text**, the sources come with it.
+
+## Notifications and status
+
+Long answers can take a few minutes, so you don't have to wait on the page:
+
+- While a response is running, a banner above the composer offers **Notify me**. Turn it on, and Merciv tells you when the assistant replies or asks you something in a chat you're not looking at. You'll get an in-app message with an **Open** button, and a browser notification if Merciv is in a background tab. You can switch this on or off under **Chat reply notifications** in your notification [settings](/account/settings).
+- In your recent chats, a dot next to each chat shows its status: pulsing grey while it's working, yellow when it's waiting for your input, and green when it has finished and you haven't opened it yet.
+- The Merciv icon in your browser tab changes color too: yellow when a chat needs your input, blue when one finished while you were away.
 
 ## Chat history
 
-- Your chats appear under **Recent Chats** in the left navigation, sorted by most recent, and in project and home lists.
-- Within a long chat, older messages load 10 at a time — click **Load more** at the top of the conversation.
-- A chat can belong to a [Project](/projects/overview). Chats started from a project page attach to that project automatically.
+- Your chats appear under **Recents** in the left navigation, grouped by day. Use the filter there to show only chats, or open the full **Recents** page.
+- In a long chat, older messages load automatically as you scroll up.
+- A chat can belong to a [Project](/projects/overview). To file a new chat into a project, pick one under the home composer with **Work in a project**. Chats you start while working in a project are filed into it automatically.
 
 ### Renaming, moving, and deleting chats
 
@@ -62,11 +90,11 @@ Open the **"..."** menu on any chat to:
 
 - **Open** the chat
 - **Rename** it
-- **Move to Project** — file it into an existing or new project
-- **Delete** it — the chat disappears from your lists, and its link no longer works
+- **Move to Project**: file it into an existing or new project
+- **Delete** it. The chat disappears from your lists, and its link no longer works.
 
 ## Privacy
 
-Chats are private to you. Only the person who created a chat can open it, and only while working in the organization the chat belongs to. There is no share option for chats — if you want to share what the assistant produced, share the [artifact](/artifacts/overview) or move the work into a [report](/reports/overview) instead.
+Chats are private to you. Only the person who created a chat can open it, and only while working in the organization the chat belongs to. Chats can't be shared. To share what the assistant produced, share the [artifact](/artifacts/overview) or move the work into a [report](/reports/overview).
 
 If you open a link to someone else's chat, you'll see "You do not have access to this chat session."

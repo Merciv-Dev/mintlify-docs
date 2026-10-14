@@ -36,7 +36,8 @@
             "pages": [
               "knowledge/overview",
               "knowledge/uploading-files",
-              "knowledge/organizing-and-sharing"
+              "knowledge/organizing-and-sharing",
+              "knowledge/integrations"
             ]
           },
           {
@@ -48,9 +49,10 @@
             ]
           },
           {
-            "group": "Playbooks",
+            "group": "Playbooks & Skills",
             "pages": [
-              "playbooks/overview"
+              "playbooks/overview",
+              "playbooks/skills"
             ]
           },
           {
@@ -64,6 +66,7 @@
             "group": "Artifacts & Galleries",
             "pages": [
               "artifacts/overview",
+              "artifacts/editing",
               "galleries/overview"
             ]
           },

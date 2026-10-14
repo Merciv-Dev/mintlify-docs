@@ -8,16 +8,16 @@ Most issues resolve with a retry or a page refresh — Merciv does much of its w
 
 ## Uploads and file processing
 
-### A file is stuck on "Processing..."
+### A file is stuck processing
 
-Files aren't usable by chat or search until background processing finishes. Processing normally takes a few minutes; large or scanned documents take longer because every page is processed individually.
+While a file is being processed, Knowledge shows it as **Understanding** (or **Processing...**). Files aren't usable by chat or search until background processing finishes. Processing normally takes a few minutes; large or scanned documents take longer because every page is processed individually.
 
 **What to try:**
 
 - Refresh the page — if your connection dropped mid-processing, the file may already be done and the screen just didn't update.
 - Wait a bit longer for large PDFs or decks. Some stalled files recover on their own within a retry window.
 
-A file that has been processing for more than 15 minutes is shown as failed (red) in the processing list. If a file stays stuck or shows as failed after 15–30 minutes, contact support with the file name — the Merciv team can re-run processing for you.
+If processing can't complete, the file shows **Failed**, and the upload tray says "Processing failed. Try uploading this file again." Re-upload the file once. If a file is still processing after about 30 minutes, or fails again after a re-upload, contact support with the file name — the Merciv team can re-run processing for you.
 
 ### An upload failed
 
@@ -26,8 +26,9 @@ A file that has been processing for more than 15 minutes is shown as failed (red
 **What to try:**
 
 - Use **Retry** in the upload tray. Retry only works before you reload the page, so retry first, refresh second.
-- If an upgrade dialog opens showing storage used versus your limit, your organization has reached its plan's storage quota. Delete files you no longer need, or contact your Merciv representative about your plan.
+- If you see **"Your knowledge storage is full"**, your organization has reached its plan's storage limit. Delete files you no longer need, or ask an organization admin to request more storage. See [Billing and plans](/admin/billing-and-plans).
 - If you see "No active organization. Please refresh and try again," refresh the page and upload again.
+- If the tray says "You do not have permission to upload to this knowledge base," you can't change that base. Upload somewhere you can, or ask the base's owner for access. See [Uploading files](/knowledge/uploading-files).
 
 If uploads keep failing across retries and files, contact support.
 
@@ -35,10 +36,11 @@ If uploads keep failing across retries and files, contact support.
 
 Knowledge uploads are validated in your browser, so rejections are immediate:
 
-- **"Invalid file type"** — Knowledge accepts PDF, Word, PowerPoint, Excel, CSV, and images (jpg, jpeg, png, webp). Convert other formats before uploading. Plain-text files can still be attached directly in [chat](/chat/sources-and-attachments).
-- **"File too large"** — the limit is 100 MB per file. Split or compress larger files.
-- **"Too many files"** — upload batches are capped at 50 files. Split into multiple uploads.
-- **"...does not match its file type"** — the file's contents don't match its extension, usually because it was renamed or is corrupted. Re-export it from its source application.
+- **"Invalid file type"** — Knowledge accepts PDF, Word, PowerPoint, Excel, CSV, Parquet, SPSS (`.sav`), Markdown, and images (jpg, jpeg, png, webp). Convert other formats before uploading. Plain-text, HTML, XML, and JSON files can still be attached directly in [chat](/chat/sources-and-attachments).
+- **"File too large"** — the standard limit is 100 MB per file (the message shows your organization's limit). Split or compress larger files.
+- **"Too many files"** — a single upload is capped at 2,500 files. Split into multiple uploads.
+- **"Upload too large"** — a single upload can't exceed 25 GB in total. Files over the budget aren't added; upload them separately.
+- **"Invalid file"** ("...does not match its file type") — the file's contents don't match its extension, usually because it was renamed or is corrupted. Re-export it from its source application.
 - **"Empty file"** — 0-byte files are rejected. Check that the file opens locally.
 
 Rejected files don't block the rest of the batch — valid files in the same selection still upload. See [Uploading files](/knowledge/uploading-files) for the full limits.
@@ -53,7 +55,7 @@ Chat replies stream to your browser live, so a network interruption (laptop slee
 
 - Refresh the page. The completed response often appears.
 - If it doesn't, resend the message.
-- For Research mode, "still working" phrases after 30 seconds or so are normal — deep research runs for minutes, not seconds.
+- In **Deep research** mode, a long-running activity timeline is normal — deep research typically takes 5–15 minutes.
 
 If chat is unresponsive for everyone on your team at once, contact support — that points to a platform issue rather than your connection.
 
@@ -61,9 +63,9 @@ If chat is unresponsive for everyone on your team at once, contact support — t
 
 A background task the assistant was running errored or was interrupted. Retry the request in the same chat. If the same request fails repeatedly, contact support with the chat and the prompt you used.
 
-### "File unavailable" on a file card
+### "File unavailable" on a citation
 
-The assistant referenced a file that never finished generating. Ask it to produce the file again in the same chat. If regeneration fails too, contact support.
+A cited source file couldn't be loaded — it may have been removed, or you may no longer have access to it. Deleted sources show "(deleted)" next to their name. Ask the file's owner to share it again, or re-upload it if it was yours.
 
 ### "Unable to load file" or "File not found — The file may have expired or been removed"
 
@@ -82,9 +84,13 @@ Remove or resize attachments to fit the limits, then resend. See [Sources and at
 
 The send didn't go through, usually a momentary network or service hiccup. Retry — it typically works on the second attempt. If you see "No active organization found," reload the page first.
 
-### "Upgrade to keep chatting"
+### "You've used all your credits"
 
-Your organization's platform access has lapsed, so sending messages (including [Playbook](/playbooks/overview) runs) is blocked. An organization admin should check **Settings → Billing & Plan**, or contact your Merciv representative.
+Your organization's shared credits have run out for this cycle, so new messages can't be sent. Organization admins see a **Request Access** button to reach the Merciv team; other members should contact their organization's administrator. See [Billing and plans](/admin/billing-and-plans).
+
+### "Upgrade to keep chatting" or "Request access to continue"
+
+Your organization's plan no longer includes access to Merciv, so sending messages (including [Playbook](/playbooks/overview) runs) is blocked. Click **Request Access**, switch to another organization if you belong to one, or contact your Merciv representative.
 
 ## Trackers and stories
 
@@ -125,7 +131,7 @@ The tracker was deleted, the link is wrong, or you don't have access — organiz
 What this means depends on what was shared:
 
 - **Chats can't be shared at all.** A chat is visible only to the person who created it. To share chat output, share the [generated artifact](/artifacts/overview) or create a [report](/reports/overview) instead.
-- **Projects, reports, and artifacts** must be shared with you explicitly. Ask the owner to open **Share** and add you.
+- **Projects, reports, and artifacts** must be shared with you, either directly or through a project they belong to. Ask the owner to open **Share** and invite you.
 - **Wrong organization** — if you belong to more than one organization, confirm the right one is active. Content is scoped per organization.
 
 If the owner has shared the item with you and you still can't open it, contact support.
@@ -134,7 +140,7 @@ If the owner has shared the item with you and you still can't open it, contact s
 
 Public links are controlled by the owner and stop working the moment sharing is turned off:
 
-- **Reports** — "Report Access Denied" means the share link is invalid or the report was set back to private. Ask the owner for a fresh link.
+- **Reports** — "Report Access Denied" means the share link is invalid or the owner switched off **Anyone with the link**. Turning it back on creates a new link, so ask the owner for the fresh one.
 - **Stories** — a story link shows "Story Not Available" when the story is private. Ask the owner to make it public.
 - **Artifacts** — "Artifact not available" means the public link was turned off or the artifact was removed. Ask the owner to re-enable the public link.
 
@@ -142,7 +148,7 @@ A public link never confirms whether the item still exists — private, deleted,
 
 ### "You do not have permission to share this item"
 
-You have view-only access. Only editors and owners can share; ask the owner to upgrade your access to **Can edit**.
+You have view-only access. Only editors and owners can share; ask the owner to change your access to **Full access**.
 
 ### "The report is temporarily unavailable, you cannot edit this report"
 
@@ -153,7 +159,8 @@ The collaborative editing session couldn't start, so the report opened read-only
 ### Can't log in
 
 - **"Merciv is currently available for work email addresses"** — personal email domains (gmail and similar) are blocked. Click **Try another account** and sign in with your company email.
-- **Bounced back to the login page repeatedly** — the session is cleared automatically so the next attempt starts clean. Try once more; if the loop continues, contact support.
+- **Bounced back to the login page repeatedly** — if your session can't be confirmed, it's cleared automatically so the next attempt starts clean. Try once more; if the loop continues, contact support.
+- **The page briefly reloads and returns you to where you were** — Merciv renewed your session in the background. No action needed. If this ends with you being signed out, log in again.
 - **Opening Merciv inside another app** (a link tapped in LinkedIn, Instagram, and similar in-app browsers) uses a full-page login instead of a popup. If login misbehaves there, open the link in your regular browser.
 
 ### Stuck on "Check Your Email"
@@ -175,14 +182,45 @@ Your account exists but doesn't belong to an organization — typically after be
 
 ### A feature is missing from your navigation
 
-Some features — including Playbooks, Portfolio, Galleries, and certain chat options — are available on select plans and may not appear for your organization.
+Some features — including Playbooks, Portfolio, Galleries, Integrations, and certain chat options — are available on select plans. They may not appear for your organization, or may appear with a lock and a **Request Access** option.
 
 <Note>
 If you expect a feature and don't see it, contact your Merciv representative. Feature availability is set per organization, so teammates at other companies may see options you don't.
 </Note>
 
-### "Looks like something went wrong." (full-screen error)
+## Members and invites
+
+These apply to organization admins and owners managing people from **Settings → Members**. See [Managing your organization](/admin/managing-your-organization).
+
+### An email invite won't send
+
+- **"User Already Invited"** — that address already has a pending invite. Remove it from the pending list in the invite dialog, then invite again.
+- **"Invalid Email"** — check the address for typos.
+- **"Your team has outgrown this plan"** or **"You've filled every seat of this type"** — your plan's member or seat limit is reached. Pending invites count toward it, so remove any you no longer need, or choose a seat type that still has room.
+- **A generic error as a member** — only organization admins and owners can send email invitations. Share your personal invite link instead, if you have one, or ask an admin.
+
+### A role or seat change is refused
+
+- **"Org Owners and Org Admins require a Full Access seat."** — move the person to a Full Access seat first.
+- **"Only an Org Owner can manage another Org Owner."** — ask an owner to make the change.
+- **"Assign another Org Owner before changing the last owner."** — every organization needs at least one owner. Make someone else an owner first.
+
+## Errors and app updates
+
+### "This one's on us" (full-screen error)
 
 The app hit an unexpected error. The Merciv team is notified automatically the moment it happens — you don't need to file a report for it to be seen.
 
-**What to try:** click **Go to home**, or refresh the browser. That recovers the session in most cases. A one-off occurrence needs no follow-up; if the crash repeats on the same page or action, contact support with the steps that trigger it.
+**What to try:** click **Retry**, or refresh the browser. That recovers in most cases. A one-off occurrence needs no follow-up; if the error repeats on the same page or action, contact support with the steps that trigger it.
+
+### "Page not found"
+
+The link points to a page that doesn't exist — it may be mistyped or out of date. Click **Go home** and navigate from there, or ask whoever sent the link for a current one.
+
+### "Temporarily offline"
+
+Merciv is down for maintenance. Click **Retry** after a few minutes. If it persists, contact support.
+
+### "A required update is available"
+
+A new version of Merciv has been released and the app reloads itself after a short countdown. Let it finish; you'll be back where you were. You may also see "Updated app to the latest version" after a reload.

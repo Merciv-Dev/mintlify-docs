@@ -4,9 +4,9 @@ description: "Versioned files and dashboards the assistant creates in chat, with
 icon: "layers"
 ---
 
-Artifacts are the saved outputs the assistant produces during a conversation: documents, spreadsheets, presentations, markdown notes, HTML pages, images, PDFs, CSV data files, and interactive Canvas dashboards. Instead of living only inside a chat transcript, each artifact gets its own page where you can view it, download it, edit it by asking the assistant, share it with teammates, and browse its version history.
+Artifacts are the saved outputs the assistant produces during a conversation: documents, spreadsheets, presentations, markdown notes, HTML pages, images, videos, PDFs, CSV data files, and interactive Canvas dashboards. Instead of living only inside a chat transcript, each artifact gets its own page where you can view it, download it, edit it, share it with teammates, and browse its version history.
 
-You don't create artifacts manually. When the assistant produces a file or Canvas in a chat, it becomes an artifact automatically. See [Generated files](/chat/generated-files) for how files come out of chat.
+You don't create artifacts manually. When the assistant produces a file or Canvas in a chat, it becomes an artifact automatically. If the chat belongs to a project, the artifact is saved in that project. See [Generated files](/chat/generated-files) for how files come out of chat.
 
 <Note>
 Canvas dashboards are available on select plans. Contact your Merciv representative if you don't see them.
@@ -14,72 +14,97 @@ Canvas dashboards are available on select plans. Contact your Merciv representat
 
 ## Open an artifact
 
-- **From chat** — generated files appear as attachment cards on the assistant's message. Click one to open the full artifact page; on desktop, the conversation moves into a side panel so it stays visible.
-- **From Home or Recents** — use the **Artifacts** filter alongside Chats, Reports, and Galleries, then click an artifact to open it.
+- **From chat** — generated files appear as cards on the assistant's message. Click one to open the full artifact page; on desktop, the conversation moves into a side panel so it stays visible. Hover a card to show its **Download** button.
+- **From Recents** — the **Artifacts** filter in the sidebar's **Recents** list, or the **Artifacts** tab on the full **Recents** page, shows your artifacts together with your reports.
+- **From Home** — on the **Recent** tab, filter by **Artifacts**.
+- **From search** — use the **Artifacts** filter in search.
+- **From a project** — artifacts saved in a project are listed on the project page.
 
-The artifact page shows the latest version full-screen. Files render in the built-in viewer; Canvas dashboards render natively and can be edited in place.
+## View an artifact
 
-## Edit an artifact through chat
+The artifact page shows the latest version in a focused viewer, with the file name and actions in the top bar. How it displays depends on the type:
 
-Click the **Edit** (chat) button in the top bar. This attaches the artifact as a source in the chat side panel, so you can ask the assistant to modify it: "shorten the executive summary," "add a column for region," and so on.
+- **Documents, presentations, spreadsheets, and PDFs** open in the built-in document viewer.
+- **HTML pages** render as interactive pages.
+- **CSV files** open in a data grid.
+- **Markdown** renders as a formatted document.
+- **Images** display full size, and **videos** play inline.
+- **Canvas dashboards** render natively and can be edited in place. See [Edit artifacts](/artifacts/editing).
 
-The assistant's edit is saved as a new version of the same artifact, not a copy. This requires **Can edit** or **Owner** permission. A just-edited artifact can take a couple of seconds to show the new version.
+Click **Fullscreen** in the top bar to give the artifact the whole screen.
+
+For PDFs, Word documents, and presentations, the enhanced document viewer adds:
+
+- **Zoom in**, **Zoom out**, and **Fit page** controls in the bottom-right corner.
+- A switch between **Scroll view**, which scrolls continuously, and **Page view**, which shows one page at a time.
+- Page thumbnails for jumping to a page in multi-page documents.
+- Keyboard paging. Use the Up and Down arrow keys to scroll. In **Page view**, the Left and Right arrow keys and Page Up and Page Down turn pages.
+- Cmd/Ctrl+F to find text in the document.
 
 <Note>
-If you and someone else (or the assistant) save changes to the same Canvas at the same time, the second save is rejected with a conflict instead of overwriting the other change. Retry your save.
+The enhanced document viewer is available on select plans. Contact your Merciv representative if you don't see these controls.
 </Note>
 
-## Version history and restore
+## Artifact actions
 
-Every change to an artifact creates a new version.
+The top bar holds the main actions. Which ones you see depends on your access.
 
-<Steps>
-  <Step title="Open the history">
-    Click the **Version history** (clock) icon in the top bar. Versions are listed with their number, time, and author; a dot marks the current one. The list shows up to the 50 most recent versions.
-  </Step>
-  <Step title="View an older version">
-    Click a version. The page shows a "Viewing version N (read-only)" banner with **Restore** and **Back to current** buttons.
-  </Step>
-  <Step title="Restore it">
-    Click **Restore** (requires edit or owner permission). Restoring doesn't rewind history; it adds a new version that matches the selected snapshot, then returns you to the live document.
-  </Step>
-</Steps>
+- **Version history** (clock icon) — browse and restore earlier versions. See [Version history and restore](/artifacts/editing#version-history-and-restore).
+- **Return to chat** — reopens the conversation the artifact came from. It appears only when that conversation is yours, because chats are private.
+- **Edit** or **Ask** — opens the chat side panel with the artifact attached. Editors see **Edit** and can ask the assistant for changes. Viewers see **Ask** and can ask questions about it.
+- **Share** — opens the share dialog. Editors and the owner only.
+- **Download** — downloads the current version. Canvas dashboards have no file to download.
+
+The **More actions** (⋯) menu holds the rest:
+
+- **Rename** — the file extension is kept for you, so you only edit the name.
+- **Export as Word doc** — for markdown and plain-text artifacts.
+- **Copy content** — copies the text of text-based artifacts.
+- **Move to Project** — files the artifact in a project.
+- **Delete file** — owner only.
 
 ## Share an artifact
 
-The person whose chat produced the artifact is its **Owner**. With edit or owner permission, click **Share** to open the share dialog:
+The person whose chat produced the artifact is its **Owner**. Editors and the owner can click **Share** to open the share dialog:
 
-- **Share with users** — search for teammates and add them as **Viewer** ("Can view") or **Editor** ("Can edit"). The access list shows everyone with access and lets you change or remove roles.
-- **Public link** — a toggle that makes the artifact viewable by anyone with the link, no account required. Turning it on reveals a copyable link; turning it off shows "The public link no longer grants access" and old links stop working. The public page is strictly read-only: no editing, no version history, no sharing controls.
+- **Invite people** — click **Add emails to invite people**, type a teammate's name or email, and pick them from the suggestions. Choose **Full access** (Editor) or **View only** (Viewer), then click **Invite**. You can only add people in your organization. People you add get a notification.
+- **People with access** — lists the owner and everyone you've shared with. Use the dropdown next to a person to switch between **Full access** and **View only**, or choose **Remove access**.
+- **Public link** — turn on **Anyone with the link** to let anyone open the artifact without an account. Turning it off shows "The public link no longer grants access," and old links stop working.
+- **Copy link** — copies the artifact's link. When the public link is on, it copies the public link.
+
+The public page is read-only. It shows the latest version, with no editing, version history, downloads, or sharing controls.
 
 <Note>
 Public artifact links are available on select plans. Contact your Merciv representative if you don't see the option.
 </Note>
 
-There is no option to share an artifact with your entire organization at once; use per-user sharing or the public link.
-
-## Download
-
-Click **Download** in the top bar to download the file. Text-based artifacts also offer a **Word Doc** export option.
+You can't share an artifact with your whole organization at once. Share it with people individually, use the public link, or keep it in a shared project. Artifacts in a project are available to the project's members: project Viewers can view them, and project Editors can edit them. See [Sharing and permissions](/getting-started/sharing-and-permissions).
 
 ## Rename, move, and delete
 
-From the Home and Recents lists, artifacts support **Rename**, **Move to project**, and **Delete**.
+The **...** menu on an artifact in Recents, Home, a project, or search offers **Open** and, depending on your access, **Rename**, **Share**, **Move to Project**, and **Delete**. Editors can rename, share, and move. Only the owner can delete.
 
-Delete is reversible: opening a deleted artifact shows a banner with the deletion date and a **Restore** button, visible to the owner only.
+Deleting asks you to confirm, then removes the artifact from your lists. If someone opens a deleted artifact from a link or an old chat, they see a banner with the deletion date. The owner sees a **Restore** button on that banner.
 
 ## Limits
 
+- Generated files can be up to 100 MB each.
 - Canvas dashboards are capped at 2 MB of content; edits beyond that are rejected.
 - The version history list shows up to the 50 most recent versions.
 
 ## Related pages
 
 <CardGroup cols={2}>
+  <Card title="Edit artifacts" icon="pencil" href="/artifacts/editing">
+    Ask for changes, edit a Canvas, and restore versions.
+  </Card>
   <Card title="Generated files" icon="file-output" href="/chat/generated-files">
     How the assistant produces files in chat.
   </Card>
   <Card title="Projects" icon="folder" href="/projects/overview">
     Organize artifacts alongside related work.
+  </Card>
+  <Card title="Sharing and permissions" icon="users" href="/getting-started/sharing-and-permissions">
+    How access works across Merciv.
   </Card>
 </CardGroup>
