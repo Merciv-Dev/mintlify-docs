@@ -1,0 +1,86 @@
+---
+title: Integrations
+description: Connect the apps your team already uses so the assistant can work with them in chat, and sync files from cloud storage into Knowledge.
+icon: plug
+---
+
+Integrations connect Merciv to the tools your team already works in — Slack, Notion, Gmail, Google Drive, HubSpot, and many more. Once an app is connected, the assistant can read from it and take actions in it on your behalf during a chat.
+
+<Note>
+Integrations are available on select plans. If you don't see **Integrations** in your account menu, contact your Merciv representative.
+</Note>
+
+## Open Integrations
+
+Click your name at the bottom of the left navigation to open the account menu, then click **Integrations**.
+
+The page has three tabs:
+
+- **Tools** — apps the assistant can use in chat. Apps you've connected appear first under **Connected**, followed by **Popular** apps and the rest of the catalog grouped by category.
+- **Files** — cloud storage sources an organization admin can sync into Knowledge. See [Sync files into Knowledge](#sync-files-into-knowledge).
+- **Data** — reserved for structured data sources. Nothing is available to connect here yet.
+
+Use the search box to find an app by name, and on the **Tools** tab, the category filter to browse one category at a time.
+
+## Connect an app
+
+<Steps>
+  <Step title="Pick the app">
+    On the **Tools** tab, click the app's card or its **+** button.
+  </Step>
+  <Step title="Review and connect">
+    Merciv explains what the connection allows. Click **Connect**.
+  </Step>
+  <Step title="Approve access">
+    Sign in to the app if asked and approve access. You're returned to Integrations, and the app moves to **Connected**.
+  </Step>
+</Steps>
+
+Your permissions carry over: the assistant can only reach what your own account in that app can already open. Connections you make here are personal — they only act as you.
+
+Your plan sets how many apps each person can connect. If you reach the limit, Merciv shows a dialog where you can request more.
+
+## Use connected apps in chat
+
+The assistant can use your connected apps whenever they help answer a question. To point it at a specific app, click **Integrations** below the chat composer and pick the app, or type **@** in the composer and choose it under **Integrations**. See [Sources and attachments](/chat/sources-and-attachments).
+
+## Manage or disconnect an app
+
+Click a connected app's card to see when it was connected, whether it's **Personal** or **Shared**, and when it was last used. From there:
+
+- **Reconnect** if the app reports a problem or its sign-in has expired.
+- **Disconnect** to remove the connection. Disconnecting a **Personal** connection only affects you; disconnecting a **Shared** connection affects everyone in your organization. Anything already copied into Knowledge stays there.
+
+## Connect a custom tool
+
+If your team runs its own MCP server — for example, an internal search or data service — you can connect it as a custom tool.
+
+<Note>
+Custom tools are available on select plans.
+</Note>
+
+1. On the **Tools** tab, click **New custom**.
+2. Enter a **Name** and the **Server URL** (it must use HTTPS).
+3. Under **Authentication**, choose **None**, **API key**, or **OAuth 2.0**, and fill in the details your server needs.
+4. Under **Availability**, choose **Just me** or **Organization**. Only organization admins can make a custom tool available to the organization.
+5. Click **Connect**.
+
+Custom tools appear under **Connected** with the name you gave them, and the assistant sees that name too. For a custom tool available to the organization, organization admins can open its card and choose who can use it: **Everyone in the organization** or **Restricted to specific people**. Click **Save access** to apply the change.
+
+## Sync files into Knowledge
+
+Organization admins can connect a cloud storage source on the **Files** tab — Google Drive, OneDrive, SharePoint, or Amazon S3 — and Merciv copies its files into Knowledge so the assistant can find and cite them. Syncing can pull in a large library, so it's limited to organization admins.
+
+<Note>
+File sync is available on select plans and requires [Knowledge](/knowledge/overview).
+</Note>
+
+Permissions from the source carry over: each person can only find synced files that their own account in that source can open.
+
+Click a connected source to see its sync status and when it last synced. From there you can:
+
+- **Edit** the sync scope to limit it to specific folders (or sites and libraries), or leave it empty to sync everything the linked account can see. Click **Save scope** to apply.
+- **Re-sync** to pull changes now.
+- **Reconnect** if the status shows **Sync has stalled** or **Sync stopped**.
+
+Merciv checks for changes on a regular schedule, so new and updated files arrive without any action from you.

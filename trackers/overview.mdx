@@ -4,28 +4,40 @@ description: "Set up an always-on research assistant that monitors a topic and d
 icon: "radar"
 ---
 
-A tracker is an always-on research assistant. You describe what to watch — a topic, a set of competitors, a market, a regulation — and the tracker researches it on a recurring schedule (or on demand) and publishes its findings as **stories**: readable research articles that appear on the tracker's page and in your [Discover feed](/discover/overview).
+A tracker is an always-on research assistant. You describe what to watch — a topic, a set of competitors, a market, a regulation — and the tracker researches it on a recurring schedule (or on demand) and publishes its findings as **stories**: readable research articles that appear on the tracker's page and in [Discover](/discover/overview).
 
 Instead of re-asking the same research question every week, you configure it once and Merciv delivers fresh, non-duplicative updates automatically.
 
-Open **Trackers** from the main navigation sidebar. The list shows all of your trackers as cards, with tabs for **My Trackers**, **Organization Trackers** (visible to organization admins), and **Archived**. Click a card to open the tracker's detail page, which shows its status, next run time, sources, and a timeline of runs and the stories each run produced.
+Open **Trackers** from the main navigation sidebar. Your trackers appear as cards, organized into tabs:
+
+- **Private** — your personal trackers (the default view).
+- **Organization** — trackers shared with your whole organization. Visible to organization admins only.
+- **Archived** — trackers you've archived.
+
+Use the sort menu to switch between **Most Recent** and **Oldest**. Click a card to open the tracker's page, which shows its topic, status, next run time, sources, and a timeline of runs and the stories each run produced.
 
 ## Create a tracker
 
 <Steps>
   <Step title="Start a new tracker">
-    On the Trackers page, click **New**. If you don't have any trackers yet, you can also pick one of three starter templates — **Competitive Brand Monitoring**, **Industry News & Trends**, or **Market & Financial Signals** — which pre-fill the form.
+    On the Trackers page, click **New**. If the tab you're on has no trackers yet, you can also pick one of three starter templates — **Competitive Brand Monitoring** (weekly), **Industry News & Trends** (weekly), or **Market & Financial Signals** (monthly) — which pre-fill the form.
   </Step>
   <Step title="Name it and write a monitoring brief">
-    Give the tracker a name, then describe what it should watch in the **Topic** field. Be specific — for example: "Monitor quarterly earnings and guidance from major sneaker brands including Nike, Adidas, and New Balance." Both fields are required.
+    Give the tracker a name, then describe what it should watch in the topic field. Be specific — for example: "Monitor quarterly earnings and guidance from major sneaker brands including Nike, Adidas, and New Balance." Both fields are required.
   </Step>
   <Step title="Choose a schedule">
-    Pick a frequency: **Manual**, **Daily**, **Weekly** (the default), or **Monthly**. For scheduled trackers, choose a time of day (in 30-minute increments) plus the day of week (Weekly) or day of month (Monthly). Schedules run in your browser's timezone. The Weekly default is Monday at 9:00 AM.
+    Pick a **Frequency**: **Manual**, **Daily**, **Weekly** (the default), or **Monthly**.
+
+    - **Daily** — choose a time of day.
+    - **Weekly** — choose one or more days of the week and a time.
+    - **Monthly** — choose a day of the month (1–31) and a time.
+
+    Times are offered in 30-minute increments and run in your browser's timezone, which is shown next to the time picker. A new tracker defaults to Weekly, Monday at 9:00 AM.
 
     Manual trackers never run on their own — they only run when you click **Run Now**.
   </Step>
   <Step title="Add sources (optional)">
-    Add up to 10 website URLs to focus the research on specific sites. Leave the list empty to search broadly.
+    Enter a website URL and click **Add** to focus the research on specific sites. You can add up to 10. Leave the list empty to search broadly.
   </Step>
   <Step title="Create">
     Click **Create**. The tracker appears in your list and runs on its schedule from then on.
@@ -38,20 +50,29 @@ Open **Trackers** from the main navigation sidebar. The list shows all of your t
 
 ## Personal and organization trackers
 
-- **Personal trackers** (the **My Trackers** tab) are visible and manageable only by you. Any organization member can create one, and its stories appear in your own feed.
+- **Personal trackers** (the **Private** tab) are visible and manageable only by you. Any organization member can create one, and its stories are private to you unless you share them.
 - **Organization trackers** are visible and manageable only by organization admins. Their stories are visible to everyone in the organization.
 
 If you're an organization admin, the create form includes **My Tracker** and **Organization Tracker** scope tabs. Admins can also convert a tracker's scope later — see [Managing trackers](/trackers/managing-trackers).
 
+<Note>
+  Organization trackers are available on select plans with more than one user.
+</Note>
+
 ## Create a tracker from chat
 
-You can also set up trackers without leaving a conversation. When you ask Merciv to "track", "monitor", or "keep me updated on" something in [Chat](/chat/overview), it proposes one to three tracker cards showing a name, monitoring brief, frequency, and sources. Edit any proposal, then click **Create** to set it up or **Dismiss** to skip it. Created trackers show a **View in Trackers** link that takes you to the Trackers page.
+You can also set up trackers without leaving a conversation. When you ask Merciv to "track", "monitor", or "keep me updated on" something in [Chat](/chat/overview), it can propose one to three trackers. The proposals appear one at a time in a card showing the name, monitoring brief, schedule, and sources.
+
+- Click **Create** to set up the tracker, or **Skip** to pass on it.
+- Use **Next** to move to the next proposal, and **Done** when you've decided on all of them.
+
+Trackers created from chat are personal trackers scheduled at 9:00 AM in your timezone (Mondays for weekly trackers, the 1st for monthly ones). To change the brief, schedule, or sources, edit the tracker on the Trackers page afterward — or ask Merciv for a revised proposal. Once you're done, the conversation shows which trackers were created, each linking to the Trackers page.
 
 ## What a run produces
 
-Each run is an AI research job. Merciv researches your topic (or generates fresh sub-topics for the period), checks the candidates against stories the tracker has already published so you only get genuinely new material, and writes a story — a research article with citations, a title, and a preview — for each new topic. Processing happens in the background and can take a few minutes.
+Each run is an AI research job. Merciv researches your topic (or generates fresh sub-topics for the period), checks the candidates against stories the tracker has already published so you only get genuinely new material, and writes a story for each new topic — a research article with citations, a title, a summary, and a cover illustration. Processing happens in the background and can take a few minutes.
 
-Finished stories appear on the tracker's page and in your [Discover feed](/discover/overview).
+Finished stories appear on the tracker's page and in [Discover](/discover/overview).
 
 ## Next steps
 

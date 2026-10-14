@@ -14,7 +14,7 @@ Galleries and image generation are available on select plans. Contact your Merci
 
 Click **New** at the top of the app and choose **New Gallery**. Merciv creates an "Untitled Gallery" and opens it. If you have a project open, the gallery is created inside that project.
 
-Rename the gallery by clicking its name on the page; a "Saved" indicator confirms the update. You can also find galleries later with the **Galleries** filter on Home and in Recents.
+Rename the gallery by clicking its name on the page; a "Saved" indicator confirms the update. You can find galleries later from the **Galleries** filter on Home's **Recent** tab, in search, or in your **Recents** list.
 
 ## Generate images
 
@@ -23,14 +23,16 @@ Rename the gallery by clicking its name on the page; a "Saved" indicator confirm
     Type a prompt in the composer at the bottom of the gallery ("Describe your image...") and press Enter or the send arrow.
   </Step>
   <Step title="Optionally shape the output">
-    Next to the composer, you can attach reference images, pick colors, choose a style, and adjust settings such as image size. Once you've set parameters, **Save** and **Clear** buttons appear so you can store them as a reusable template.
+    Next to the composer, you can attach reference images, pick colors, choose a style, adjust settings such as image size, and apply a saved template. Once you've set parameters, **Save** and **Clear** buttons appear so you can store them as a reusable template or start over.
   </Step>
   <Step title="Wait a moment">
     Each generation produces two images. Placeholder tiles appear while generation runs in the background, and finished images replace them automatically. No refresh needed.
   </Step>
 </Steps>
 
-You can queue more generations while one is running. Images are grouped in the gallery under the prompt that generated them, and clicking any image opens a full-size viewer with navigation between images.
+You can queue more generations while one is running. Images are grouped in the gallery under the prompt that generated them. Each group shows the style, size, and colors used, with buttons to copy the prompt or generate a variation from it. Click any image to open a full-size viewer with navigation between images.
+
+Organization admins can also manage shared image templates in **Settings**, under **Image Templates**.
 
 <Tip>
 If placeholder tiles seem stuck, refresh the page. The gallery reloads its latest images on open.
@@ -41,16 +43,25 @@ If placeholder tiles seem stuck, refresh the page. The gallery reloads its lates
 The gallery header has a **Create / Edit** toggle. Switch to **Edit** to refine an existing image instead of generating a new one:
 
 1. Select the image you want to edit. It opens on a mask canvas; in galleries with multiple images, use the thumbnail sidebar or arrow keys to switch between them.
-2. Paint over the region you want to change using the **erase** and **restore** brushes. Adjust the brush size as needed, and use Cmd/Ctrl+Z to undo.
+2. Paint over the region you want to change using the **Erase** and **Restore** brushes. Adjust **Brush Size** as needed. Use **Undo** (Cmd/Ctrl+Z) and **Redo** (Cmd/Ctrl+Shift+Z) to step through your strokes, and **Clear** to start the mask over.
 3. Describe the change in the composer ("Describe the changes you want to make...") and submit. Merciv regenerates only the masked region, leaving the rest of the image untouched.
+
+The Edit panel also has quick actions for the selected image: **Copy Prompt**, **Create Variation**, **Download**, and **Copy Link**, which copies the image so you can paste it into a [report](/reports/overview).
 
 If the gallery has no images yet, Edit mode shows "No Images to Edit — Generate some images first to start editing."
 
 ## Manage galleries
 
-From the Home and Recents lists, galleries support **Rename**, **Move to project**, and **Delete**. Galleries created inside a project stay organized within that project — see [Projects](/projects/overview).
+From Home, Recents, and project lists, a gallery's **...** menu offers **Rename**, **Move to Project**, and **Delete**. Only the gallery's creator can delete it, and you can't restore a deleted gallery yourself. Contact [hello@merciv.com](mailto:hello@merciv.com) if you deleted one by mistake.
 
-Galleries don't have sharing controls; a gallery is accessible to its creator. If you open a gallery you don't have access to, you'll see "You don't have access to this gallery" and be returned home.
+## Access and sharing
+
+Who can open a gallery depends on where it lives:
+
+- **Galleries outside a project** are private to their creator and can't be shared.
+- **Galleries inside a project** are available to the project's members. Project Editors also get a **Share** option in the gallery's **...** menu for giving individual teammates access. See [Projects](/projects/overview).
+
+If you open a gallery you don't have access to, you'll see "You don't have access to this gallery" and be returned home.
 
 ## Related pages
 

@@ -1,55 +1,74 @@
 ---
 title: "Managing your organization"
-description: "Organization admin settings: profile, members and roles, approved email domains, branding, and templates."
+description: "Organization admin settings: profile, members, roles and seats, approved email domains, branding, and templates."
 icon: "building-2"
 ---
 
-Organization admins see an **Organization** group in Settings (avatar → **Settings**) alongside their personal settings. Members don't see this group. Everything here applies to your whole organization.
+Organization admins and owners see an **Organization** group in Settings (account menu → **Settings**) alongside their personal settings. Members don't see this group. Everything here applies to your whole organization.
 
 ## Roles
 
-Merciv has two organization roles:
+Merciv has three organization roles:
 
 - **Member** — the default role. Members have full use of the product: they can chat, upload files, create trackers, reports, and projects, and share items they own with specific people. They see only the Personal settings group.
-- **Admin** — everything a member can do, plus organization settings: the organization profile, members and invites, approved email domains, branding, templates, and [billing](/admin/billing-and-plans). Admins can also make other members admins, remove members, and share stories organization-wide or publicly.
-
-The organization also has a **primary admin** (usually its creator), who is guaranteed access to billing and completes the organization's onboarding.
+- **Org Admin** — everything a member can do, plus organization settings: the organization profile, members and invites, approved email domains, and branding. Admins can change other members' roles and seats, remove members, share stories with the whole organization or publicly, manage organization trackers, and manage content in organization-wide Knowledge.
+- **Org Owner** — everything an admin can do. Only an owner can make someone else an owner, or change or remove another owner. An organization always keeps at least one owner. If you create an organization by signing up yourself, you're its owner.
 
 Role changes take effect immediately. No one can change their own role or remove themselves.
 
+## Seats
+
+Every member also has a seat type, which reflects what your plan includes:
+
+- **Full Access** — the standard seat.
+- **Collab** — a seat for teammates with lighter-touch needs.
+
+Org admins and owners must be on a **Full Access** seat. Your plan may set how many seats of each type you can fill, and pending invites count toward those totals. When a seat type is full, it's unavailable when you invite people or change someone's seat.
+
 ## Organization profile
 
-Edit your organization's **Name**, **Logo**, **Mission**, **Company Size**, **Industry**, and **Primary Use Cases**. These were first captured during onboarding and are saved for the whole organization.
+Edit your organization's **Name**, **Logo**, **Mission**, **Company Size**, **Industry**, and **Primary Use Cases**. These were first captured during onboarding and are saved for the whole organization. If you don't upload a logo, Merciv shows your organization's initials.
 
 ## Members
 
-The **Members** page lists everyone in your organization, with a search box and an **Admin Only** filter.
+The **Members** page lists everyone in your organization with their **Name**, **Email**, **Role**, and **Seat**. Use the search box or the **Admin Only** filter to find people. Organization admins and owners can also open this page from the account menu → **Members**.
 
 ### Inviting people
 
 <Steps>
   <Step title="Open the invite dialog">
-    Click **Invite Members**, enter the person's work email, and choose a role: **MEMBER** or **ADMIN**.
+    Click **Invite Members**, or choose **Invite** from the account menu. Enter the person's work email.
+  </Step>
+  <Step title="Choose their access">
+    Pick **Collab**, **Full Access** (the default), or **Org Admin**. Collab and Full Access invite someone as a member on that seat type; Org Admin invites them as an admin on a Full Access seat. Options for seat types that are already full are unavailable.
   </Step>
   <Step title="Send the invite">
-    The invitation goes to their email. If they already have a Merciv account, the invite is accepted automatically the next time they log in; otherwise it's applied when they sign up with that address.
+    Click **Invite**. If they already have a Merciv account, the invite is accepted automatically the next time they log in; otherwise it's applied when they sign up with that address.
   </Step>
   <Step title="Manage pending invites">
-    Pending invites are listed on the Members page — you can change an invite's role or remove it before it's accepted. Inviting an address that already has a pending invite shows "User Already Invited"; remove the existing invite to re-send. A badge on the page shows how many invites are pending.
+    Pending invites are listed in the invite dialog — you can change a pending invite between member and admin access, or remove it before it's accepted. A Collab invite's access can't be changed until it's accepted. Inviting an address that already has a pending invite shows "User Already Invited"; remove the existing invite to re-send. A badge on the Members page shows how many invites are pending.
   </Step>
 </Steps>
 
-Depending on your plan, the invite dialog may also show your personal invite link as an alternative to email invitations.
+Depending on your plan, the invite dialog also shows your personal invite link as an alternative to email invitations. Members who aren't admins can share their personal invite link, but only admins and owners can send email invitations.
 
-### Changing roles and removing members
+### Changing roles and seats
 
-Each member row has an **Admin** toggle to grant or revoke admin rights, and a remove action. Removing asks for confirmation: "Are you sure you want to remove this member from the organization?" A removed member can rejoin only with a new invite.
+Click a member's **Role** to switch between **Member**, **Org Admin**, and (for owners) **Org Owner**. Click their **Seat** to switch between **Full Access** and **Collab**. If you get an error, it explains what's blocking the change:
+
+- "Org Owners and Org Admins require a Full Access seat." — move the person to a Full Access seat first, or choose a different role.
+- "Only an Org Owner can manage another Org Owner." — ask an owner to make the change.
+- "Assign another Org Owner before changing the last owner." — promote someone else to owner first.
+
+### Removing members
+
+Open the **⋯** menu on a member's row and choose **Remove**. Merciv asks you to confirm: "Are you sure you want to remove this member from the organization?" A removed member can rejoin only with a new invite. Admins can't remove owners.
 
 ## Approved email domains
 
-Register your company's email domains so teammates can join without individual invites — anyone who signs up with a matching work email automatically joins your organization as a member.
+Register your company's email domains so teammates can join without individual invites — anyone who signs up with a matching work email automatically joins your organization as a member. Domains are managed at the top of the **Members** page.
 
-- You can register up to **3 domains**, in the form `example.com`.
+- You can register up to **3 domains**, in the form `example.com`. Press Enter or click **Add Domain**.
 - Removing a domain stops future automatic joins; existing members are unaffected.
 
 <Note>
@@ -60,9 +79,22 @@ Approved email domains are available on select plans. Contact your Merciv repres
 
 Choose the **Chart palette** used across charts and primary accents. The palette applies to everyone in your organization.
 
-## Templates
+## Collection
 
-Manage your organization's content templates. On plans that include image generation, an **Image Templates** section lets you manage the brand templates used for generated images — see [Galleries](/galleries/overview).
+The **Collection** section sets guardrails for the ongoing data collection behind [Portfolio](/portfolio/overview):
+
+- **Monthly budget** — a monthly cap on collection spend. Once it's reached, scheduled collection pauses until the next month. Leave it empty for no cap.
+- **Default mode** — whether new collection starts as **Gather once** (runs only when you start it) or **Ongoing** (runs on a schedule).
+- **Ongoing requires an admin** — when on, only organization admins can switch collection to ongoing.
+- **Allowed capabilities** — which kinds of collection can run in your organization. Leave everything unchecked to allow all.
+
+<Note>
+Portfolio is available on select plans. These settings have no effect if your organization doesn't use Portfolio.
+</Note>
+
+## Image templates
+
+On plans that include image generation, an **Image Templates** section lets you manage the brand templates used for generated images — see [Galleries](/galleries/overview).
 
 <Note>
 Image templates are available on select plans. Contact your Merciv representative if you don't see this section.
@@ -70,5 +102,5 @@ Image templates are available on select plans. Contact your Merciv representativ
 
 ## Related
 
-- [Billing and plans](/admin/billing-and-plans) — view and change your organization's plan.
+- [Billing and plans](/admin/billing-and-plans) — plan limits, credits, and how to change your plan.
 - [Sharing and permissions](/getting-started/sharing-and-permissions) — how members share work with each other and outside the organization.

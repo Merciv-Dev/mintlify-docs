@@ -1,62 +1,83 @@
 ---
 title: "Home and projects"
-description: "Find your recent work on the Home page and group related chats, reports, galleries, and artifacts into shared projects."
+description: "Find your recent work on Home and the Recents page, and group related chats, reports, galleries, and artifacts into shared projects."
 icon: "folder"
 ---
 
-Chats, reports, and generated content pile up quickly. The Home page surfaces your most recent work, and projects let you group related items and share the whole group with teammates at once.
+Chats, reports, and generated content pile up quickly. Home and the Recents page surface your most recent work, and projects let you group related items and share the whole group with teammates at once.
 
 ## The Home page
 
-Home is your landing page after login. At the top is a chat prompt box — submitting it starts a new conversation — with a carousel of prompt templates below it. Under the prompt box, three tabs organize your work:
+Home is your landing page after login. At the top is the chat prompt box — submitting it starts a new chat and opens it full screen. Use **Work in a project** under the box to create the chat inside a project. A few prompt suggestions sit below the box; click one to pre-fill it.
 
-- **Recent** — a carousel of your projects (most recently updated first), followed by a list of your recent work items. Filter the list by type (All, Reports, Galleries, Chats, Artifacts) and sort by Most Recent, Oldest, or Alphabetical. A sidebar on the right shows your most recent stories, if you have any.
+Under the prompt box, three tabs organize your work:
+
+- **Recent** — a carousel of your projects (most recently updated first), followed by your recent work items grouped by day. Filter the list by type (All, Reports, Galleries, Chats, Artifacts) and sort by Most Recent, Oldest, or Alphabetical. The search icon opens global search.
 - **Playbooks** — the playbook catalog, if [Playbooks](/playbooks/overview) are included in your plan.
 - **Projects** — a grid of every project you can access, most recent first.
 
+Chats you open from Home open full screen. Stories aren't listed on Home — find them in [Discover](/discover/overview).
+
+## The Recents page
+
+Click the **Recents** heading in the sidebar to open the Recents page. It lists everything you've worked on, newest first and grouped by day, with tabs for **All**, **Chats**, **Artifacts** (artifacts and reports), and **Projects**. Sort with the **Most Recent**, **Oldest**, or **Alphabetical** menu, or click the search button to search within the current tab.
+
+The sidebar also keeps your five most recent projects and ten most recent items one click away. See [Navigating Merciv](/getting-started/navigation).
+
 <Tip>
-To find something by name, use global search — press **Cmd/Ctrl+K** anywhere in the app. It searches reports, galleries, chats, and projects across everything you can access. Artifacts, stories, and knowledge files don't appear in search results; find artifacts through Home's Recent tab (filter by Artifacts) or the project that contains them.
+To find something by name, use global search — press **Cmd/Ctrl+K** anywhere in the app. It searches the names of everything you can access in your organization, including artifacts, stories, and Knowledge files. If you can't remember the name, click **Find with Agent** to have Merciv look through your recent work for you.
 </Tip>
 
 ## What a project holds
 
 A project groups related work under one name: chats, [reports](/reports/overview), [galleries](/galleries/overview), and [artifacts](/artifacts/overview). Each project page shows:
 
-- **Cover image** — editors can upload an image, paste an image link, generate one with AI, or remove it.
-- **Name and description** — click to edit inline. New projects are auto-named "Untitled #1", "Untitled #2", and so on until you rename them.
+- **Cover image** — editors can choose **Upload Image**, **Link Image**, or **Generate Image**, drag an image onto the cover, or choose **Delete Cover**. Click a cover to preview it.
+- **Name and description** — editors can click either to edit it inline.
 - **Sharing line** — who created the project and whether it's private or shared, with avatars of the people who have access.
-- **Contents** — everything in the project, with the same type filter and sort options as the Home page.
+- **Contents** — everything in the project, grouped by day, with a type filter and sort options.
 
 ## Create a project
 
-Click **New** in the top bar and choose **New Project**. Merciv creates the project and takes you straight into it. You can also create a project on the fly while moving an item (see below).
+You can start a project from several places:
+
+- Click **+** next to **Projects** in the sidebar.
+- Click **New** in the top bar and choose **New Project**.
+- Click **Create a project** on Home's **Projects** tab when you don't have any yet.
+
+In the **New project** dialog, enter a **Project name** (required, up to 255 characters) and an optional **Description** (up to 2,000 characters), then click **Create project**. Merciv creates the project and takes you straight into it.
+
+You can also create a project on the fly from **Work in a project** under the prompt box, or while moving an item (see below).
 
 ## Add items to a project
 
-There are two ways to get work into a project:
+There are three ways to get work into a project:
 
-- **Create inside the project.** While viewing a project, use the **New** button or the empty-state buttons to create a chat, report, or gallery — it's created in that project.
-- **Move an existing item.** From anywhere, open the "…" menu on a chat, report, gallery, or artifact and choose **Move to Project**. Pick an existing project or create a new one. Moving an item requires edit or owner access to that item.
+- **Create inside the project.** While viewing a project, use the **New** button to create a chat, report, or gallery — it's created in that project. An empty project shows the same **New** menu.
+- **Start a chat in the project.** On Home, choose the project from **Work in a project** before you send your question.
+- **Move an existing item.** From anywhere, open the **...** menu on a chat, report, gallery, or artifact and choose **Move to Project**. Select a project (or click **New Project**) and click **Confirm**. To take an item out of its project, choose **Remove from Project** instead. Moving an item requires edit or owner access to it.
 
 ## Share a project
 
-Click **Share** on the project page to open the sharing dialog. Search your organization's members by name and grant each person one of two levels:
+Click **Share** on the project page — or choose **Share** from the project's **...** menu — to open the share dialog. Click **Add emails to invite people**, add teammates from your organization, and choose an access level:
 
-- **Viewer** — view-only access. Viewers can open everything in the project but can't rename it, edit its description or cover, add items, or share it.
-- **Editor** — edit access. Editors can rename the project, edit the description and cover, create items inside it, and share it with others.
+- **Viewer** (**View only**) — viewers can open the project and its reports, galleries, and artifacts, but can't rename it, edit its description or cover, add items, or share it.
+- **Editor** (**Full access**) — editors can rename the project, edit the description and cover, create items inside it, share it, and edit the reports, galleries, and artifacts in it.
 
-The dialog also shows everyone who currently has access. Only the owner and editors can open sharing. Projects are shared person by person — there's no organization-wide toggle.
+The dialog also lists everyone who currently has access. Only the owner and editors can open sharing. Projects are shared person by person — there's no organization-wide option.
+
+<Note>
+Chats inside a shared project stay private to the person who created them. To share what a chat produced, share its artifact or move the content into a report.
+</Note>
 
 For how permissions work across the rest of Merciv, see [Sharing and permissions](/getting-started/sharing-and-permissions).
 
-<Note>
-When someone shares a project with you, you get an in-app notification in your Inbox. If you open a project link you don't have access to, you'll see "No access" and be returned to Home — ask the owner to share it with you.
-</Note>
+When someone shares a project with you, you get a notification in your Inbox. If you open a project link you don't have access to, you'll see "No access" and be returned to Home — ask the owner to share it with you.
 
 ## Rename or delete a project
 
-Both actions live in the "…" menu. Only the project owner can delete.
+Both actions live in the **...** menu. Only the project owner can delete it.
 
 <Warning>
-Deleting a project (or a chat, report, or gallery) removes it from all lists and can't be undone from the app. Deleted items are archived rather than permanently erased, so if you delete something by mistake, contact Merciv support — restoration may be possible.
+Deleting a project (or a chat, report, gallery, or artifact) removes it from all lists and can't be undone from the app. If you delete something by mistake, email [hello@merciv.com](mailto:hello@merciv.com) as soon as possible.
 </Warning>

@@ -10,7 +10,7 @@ For symptom-by-symptom help, see [Common issues](/troubleshooting/common-issues)
 
 <AccordionGroup>
   <Accordion title="Is my data private?">
-    Yes, by default. Everything you create — chats, files in Personal Data, reports, projects — is private to you until you share it. Files uploaded to **Organization Data** are visible to your whole organization; files in **Personal Data** are visible only to you. All content is scoped to your organization: people outside it can't see your work unless you create a public link. See [Sharing and permissions](/getting-started/sharing-and-permissions).
+    Yes, by default. Everything you create — chats, reports, projects, and private knowledge bases — is private to you until you share it. Files in an **Organization** knowledge base are visible to your whole organization; files in a **Private** base are visible only to you and anyone you share the base with. All content is scoped to your organization: people outside it can't see your work unless you create a public link. See [Sharing and permissions](/getting-started/sharing-and-permissions).
   </Accordion>
   <Accordion title="Who can see my chats?">
     Only you. Chats are private to their creator and have no share option. To share what a chat produced, share the generated [artifact](/artifacts/overview) or put the content in a [report](/reports/overview), both of which support sharing.
@@ -19,10 +19,10 @@ For symptom-by-symptom help, see [Common issues](/troubleshooting/common-issues)
     No — chats can't be shared. Share the artifact the chat generated, or create a report from the content. Projects, reports, artifacts, and stories all support per-user sharing.
   </Accordion>
   <Accordion title="Can people outside my organization view a report?">
-    Yes, through a public link. Anyone with the link gets read-only access — public visitors can never edit. Turning the report back to private invalidates the link immediately. See [Sharing and exporting](/reports/sharing-and-exporting).
+    Yes, through a public link. Anyone with the link gets read-only access — public visitors can never edit. Switching off **Anyone with the link** invalidates the link immediately; switching it back on creates a new one. See [Sharing and exporting](/reports/sharing-and-exporting).
   </Accordion>
   <Accordion title="Why can't I share an item I can view?">
-    Only editors and owners can share. If you see "You do not have permission to share this item," ask the owner to change your access to **Can edit**.
+    Only editors and owners can share. If you see "You do not have permission to share this item," ask the owner to change your access to **Full access**.
   </Accordion>
 </AccordionGroup>
 
@@ -30,13 +30,13 @@ For symptom-by-symptom help, see [Common issues](/troubleshooting/common-issues)
 
 <AccordionGroup>
   <Accordion title="What file types are supported?">
-    [Knowledge](/knowledge/overview) accepts PDF, Word, PowerPoint, Excel, CSV, and images (jpg, jpeg, png, webp), up to 100 MB per file and 50 files per batch. Chat attachments follow their own limits: 5 files per message, 25 MB per file, 100 MB combined.
+    [Knowledge](/knowledge/overview) accepts PDF, Word, PowerPoint, Excel, CSV, Parquet, SPSS (`.sav`), Markdown, and images (jpg, jpeg, png, webp), up to 100 MB per file and 2,500 files or 25 GB per upload. Chat attachments follow their own limits: 5 files per message, 25 MB per file, 100 MB combined — and chat also accepts plain text, HTML, XML, and JSON. See [Uploading files](/knowledge/uploading-files).
   </Accordion>
   <Accordion title="How long does file processing take?">
-    Processing happens in the background and typically takes a few minutes. Large or scanned documents take longer because every page is processed individually. A file isn't usable by chat or search until processing finishes; a file processing longer than 15 minutes is shown as failed.
+    Processing happens in the background and typically takes a few minutes. Large or scanned documents take longer because every page is processed individually. A file isn't usable by chat or search until processing finishes. If processing can't complete, the file shows **Failed** — upload it again, and contact support if it fails a second time.
   </Accordion>
-  <Accordion title="Why can't I upload to Organization Data?">
-    Only organization admins can upload to Organization Data. Everyone else uploads to Personal Data, which is private to them. Admins can also create folders anywhere and move files; members manage folders in their Personal Data only.
+  <Accordion title="Why can't I upload to a knowledge base?">
+    To upload into a knowledge base you need to be able to change it: you created it, you have full access to it, or it's an **Organization** base and you're an organization admin. Create your own base, or ask the base's owner for access. See [Uploading files](/knowledge/uploading-files).
   </Accordion>
   <Accordion title="I shared a document — why can't my teammate's chat find it yet?">
     Sharing changes take a moment to reach chat and search. A short lag is normal; if a shared file stays invisible to a teammate well beyond a few minutes, contact support.
@@ -76,18 +76,24 @@ For symptom-by-symptom help, see [Common issues](/troubleshooting/common-issues)
     No. Merciv is available for work email addresses; personal domains are blocked at signup. See [Getting access](/account/getting-access).
   </Accordion>
   <Accordion title="How do I invite teammates?">
-    Organization admins invite by email from **Settings → Members**, choosing a Member or Admin role. Admins can also approve up to 3 email domains so anyone signing up with a matching work email joins automatically as a Member. See [Managing your organization](/admin/managing-your-organization).
+    Organization admins and owners invite by email from **Settings → Members** or the account menu → **Invite**, choosing **Collab**, **Full Access**, or **Org Admin** access. Admins can also approve up to 3 email domains so anyone signing up with a matching work email joins automatically as a member. Depending on your plan, anyone can also share a personal invite link. See [Managing your organization](/admin/managing-your-organization).
   </Accordion>
   <Accordion title="Why don't I see a feature my colleague has?">
-    Some features — Playbooks, Portfolio, Galleries, and certain chat options among them — are available on select plans, and availability is set per organization. Contact your Merciv representative if you don't see a feature you expect.
+    Some features — Playbooks, Portfolio, Galleries, Integrations, and certain chat options among them — are available on select plans, and availability is set per organization. Your role matters too: organization settings and member management are only for admins and owners. Contact your Merciv representative if you don't see a feature you expect.
   </Accordion>
   <Accordion title="Why doesn't search find my artifact or uploaded file?">
-    Global search (Cmd/Ctrl+K) covers Reports, Galleries, Chats, and Projects. Artifacts, Stories, and Knowledge files aren't included — find artifacts under Home's Recent filters, stories in [Discover](/discover/overview), and files on the [Knowledge](/knowledge/overview) page.
+    Search (Cmd/Ctrl+K) matches names, not the text inside documents. With the **All** filter it covers chats, reports, artifacts, projects, galleries where available, stories, and Knowledge files and folders you can access. If a name search doesn't find it, click **Find with Agent** to have Merciv look for it in a new chat.
   </Accordion>
   <Accordion title="Does Merciv work on mobile?">
-    The web app adapts to small screens: the sidebar becomes an overlay and chat opens full-screen rather than in a side panel.
+    The web app adapts to small screens: the sidebar becomes an overlay and chat opens full-screen rather than in a side panel. On a phone, pressing Enter in the chat box adds a new line — tap the send button to send.
+  </Accordion>
+  <Accordion title="Where can I see my plan or credits?">
+    Plans are set up with Merciv rather than managed in the app, so there's no billing page. When your organization reaches a limit — including running out of credits — Merciv shows which limit you hit, and organization admins can click **Request Access** to talk to the Merciv team. See [Billing and plans](/admin/billing-and-plans).
+  </Accordion>
+  <Accordion title="Can Merciv tell me when a long answer is ready?">
+    Yes. Turn on **Chat reply notifications** in **Settings → Notifications**, or click **Notify me** on the hint above the chat box while an answer is running. You'll get a notice when Merciv replies in a chat you're not looking at. See [Personal settings](/account/settings#notifications).
   </Accordion>
   <Accordion title="What's the colored banner at the top of my screen?">
-    An official Merciv announcement. Dismissing it hides it until your next page load; it disappears for good when it expires.
+    An official Merciv announcement, such as a maintenance notice or a new feature. Its color and icon show whether it's information, a warning, or something urgent. Dismissing it hides it until your next page load; it disappears for good when it expires. Announcements can appear or update while you're working, without a refresh.
   </Accordion>
 </AccordionGroup>

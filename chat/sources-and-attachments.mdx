@@ -1,32 +1,55 @@
 ---
 title: "Sources and attachments"
-description: "Point the assistant at specific files, folders, and web pages, or attach files directly to a message."
+description: "Point the assistant at specific files, folders, web pages, and skills, or attach files directly to a message."
 icon: "paperclip"
 ---
 
-By default the assistant chooses its own sources — your knowledge base, the web, and market intelligence. When you already know where the answer should come from, you can scope the question yourself or attach the files directly.
+By default, the assistant chooses its own sources: your knowledge base, the web, and market intelligence. When you already know where the answer should come from, you can scope the question yourself or attach the files directly.
 
-## Add Sources
+## The sources menu
 
-The **Add Sources** button (the dashed plus above the composer) opens a search where you can pin your question to specific sources:
+Click **Sources** (the **+** button in the composer), or type **/** or **@** anywhere in your message. Both open the same menu. When you open it by typing, keep typing to filter the list.
 
-- **Files** and **folders** from your [Knowledge](/knowledge/overview) library
-- **Web pages** — paste a URL to add it as a web link source
+| Item | What it does |
+|---|---|
+| **Recent** | Reapply a set of sources you've used before, or jump to a recent knowledge base. |
+| **Skills** | Add one of your organization's [skills](/playbooks/skills) to the message, so the assistant follows it. |
+| **Brands** | Tag one of your brands so the assistant focuses on it. Shown when your organization has access to [Portfolio](/portfolio/overview). |
+| **Knowledge** | Browse your knowledge bases, folders, and files in [Knowledge](/knowledge/overview), and select the ones to search. |
+| **Web** | Turn web search on or off, or limit the search to a suggested site. |
+| **Integrations** | Tag a [connected app](/knowledge/integrations) so the assistant uses it. If an app isn't connected yet, selecting it starts the connection. |
+| **Playbooks** | Run a [playbook](/playbooks/overview) from chat. |
+| **Add from local files** | Attach files from your computer (see [Attaching files](#attaching-files)). |
 
-Selected sources appear as removable chips above the composer. Source sets you've used before are remembered as recent **Sources** groups, so you can reapply the same scope in one click.
+To add a specific web page, paste its URL into the menu's search box and select it.
 
-Two shortcuts:
+<Note>
+What you see in the menu depends on your plan and your organization's setup. For example, **Brands** needs Portfolio access, and **Integrations** lists only the apps available to your organization.
+</Note>
 
-- Typing **/** in the composer opens a quick menu to insert a web-page tag inline.
-- The **Web** toggle turns web search off entirely for a message — useful when you want the answer grounded only in your own documents.
+Skills, brands, and integrations appear as tags right in your message. Files, folders, and web pages appear as a **Sources** count in the composer. Click its **X** to clear them all. When you've picked items from Knowledge, a chip such as "2 files only" confirms that the assistant will search only those. Click the chip to see the items or remove one. Without a selection, it searches all the knowledge you can access.
+
+Your source selection applies to the message you're about to send and clears after you send it.
+
+<Tip>
+In the chat side panel, you can drag files from a Knowledge table onto the composer to add them as sources.
+</Tip>
+
+## Turning off web search
+
+Open **Sources**, choose **Web**, and switch off **Web search** to keep the answer grounded in your own documents. This also stops the assistant from searching market intelligence and social media data.
+
+The setting stays off for your later messages and chats until you turn it back on. While it's off, a crossed-out globe icon appears in the composer as a reminder.
 
 ## Attaching files
 
-Attach files to a message three ways: click the **paperclip** button, drag and drop onto the composer, or paste a file.
+Attach files to a message three ways: choose **Add from local files** in the sources menu, drag and drop files onto the composer, or paste them in. Pasted screenshots each get their own name, so you can paste several in a row. An upload chip shows each file's progress.
+
+Files you attach stay available for the rest of the chat. You can ask about them in later messages without attaching them again.
 
 ### Supported file types
 
-PDF, Word (doc/docx), PowerPoint (ppt/pptx), Excel (xls/xlsx), CSV, plain text, Markdown, HTML, XML, JSON, and images (jpg/jpeg/png/webp).
+PDF, Word (doc/docx), PowerPoint (ppt/pptx), Excel (xls/xlsx), CSV, Parquet, plain text, Markdown, HTML, XML, JSON, and images (jpg/jpeg/png/webp).
 
 ### Limits
 
@@ -34,15 +57,15 @@ PDF, Word (doc/docx), PowerPoint (ppt/pptx), Excel (xls/xlsx), CSV, plain text, 
 - **25 MB** per file
 - **100 MB** combined per message
 
-Empty (0-byte) files and duplicates with the same file name are rejected. If some files in a batch fail validation, the valid ones still attach. On success, a toast confirms what was added, for example "Added 2 files · Total: 12.4MB".
+Merciv rejects empty (0-byte) files and duplicates with the same file name. If some files in a batch fail these checks, the valid ones still attach, and a message lists the ones that couldn't be added.
 
-## Adding attachments to your private knowledge
+## Saving attachments to your knowledge
 
-After you send a message with attachments the platform can index, a popup asks: **"Add N files to your private knowledge?"**
+After you send a message with attachments that Merciv can index, a prompt above the composer asks whether to save them to a knowledge base.
 
-- **Confirm** to add the files to your Personal Data in [Knowledge](/knowledge/uploading-files). Processing happens in the background and can take a few minutes; once indexed, future chats can find and cite them without re-attaching.
-- **Dismiss** to keep the files scoped to that message only.
+- Click **Select base** and choose a knowledge base to save the files. Processing runs in the background and can take a few minutes. Once indexed, future chats can find and cite them without you attaching them again. See [Uploading files](/knowledge/uploading-files).
+- Click the **X** to dismiss the prompt. The files stay with this chat only.
 
 <Tip>
-Attach a file when it matters for one question. Add it to your private knowledge when you expect to keep asking about it.
+Attach a file when it matters for one conversation. Save it to your knowledge when you expect to keep asking about it.
 </Tip>

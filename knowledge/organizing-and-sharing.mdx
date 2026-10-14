@@ -1,61 +1,86 @@
 ---
 title: Organizing and sharing
-description: Use folders, search, and sharing controls to keep your Knowledge library organized and accessible to the right people.
+description: Use folders, filters, and sharing controls to keep your knowledge bases organized and available to the right people.
 icon: folder-tree
 ---
 
-Knowledge works like a file manager: organize files into folders, search and filter the list, review AI-generated summaries, and control who can access each item.
+Each knowledge base works like a shared drive: organize files into folders, find what you need with search and filters, preview files, and choose who can access the base.
+
+## Inside a knowledge base
+
+The top of a base shows its name, who created it, and its access — **Private**, **Shared base**, or your organization's name for an organization-wide base. On the right:
+
+- **Chat** starts a new chat scoped to everything in the base.
+- **Share** opens the share dialog. See [Sharing a knowledge base](#sharing-a-knowledge-base).
+- The **⋮** menu has **Rename** and **Delete** for the base, if you can change it.
+
+Click **Back to hub** to return to the list of bases. Breadcrumbs above the file list show which folder you're in; click any breadcrumb to go back up.
+
+The file list shows each item's **Name**, who added it, its type, and the **Date added**. Click a column header to sort. By default, folders come first, newest files are on top, and files that are still processing stay at the top until they finish.
 
 ## Folders
 
-Click **New Folder** in the toolbar to create a folder in the current tab. Folders can be nested up to **5 levels** deep, and breadcrumb navigation starting at **Home** shows where you are.
+Click the **Create folder** icon in the toolbar, enter a name, and click **Create**. To group existing files, select them and click **New folder with selected** in the selection toolbar.
 
-Who can do what:
+Folders can be nested up to **10 levels** deep, counting the knowledge base itself. Folder names can't be empty, start with a dot, or contain `/ \ : * ? " < > |`.
 
-- **Organization admins** can create folders in either Organization Data or Personal Data, and can move files by dragging them onto folders or breadcrumbs.
-- **Everyone else** can create folders only in their Personal Data. If you need a file moved in Organization Data, ask an organization admin.
+## Find files
 
-## Search and filters
+- **Type** — the dropdown at the left of the toolbar narrows the list to **Folders**, **Documents**, **Images**, **Spreadsheets**, or **Slides**. Choose **All files** to reset it.
+- **Search** — click the magnifier icon and type part of a file name.
 
-- The **Search** bar in the toolbar filters the current file list by name.
-- The **filter** button adds an **Uploaded by** dropdown so you can narrow the list to files from a specific team member.
-- Click a column header to sort. Long lists load 50 items at a time as you scroll.
+<Note>
+Advanced filters are available on select plans. With them, the toolbar also lets you filter by **Category**, **Format**, **Provider**, **Added by**, **Coverage**, **Document date**, and **Added** date, and the file list shows **Category** and **Provider** columns. Merciv reads these details from each file when it's processed.
+</Note>
 
-## File details and summaries
+## Preview a file
 
-Click a file row to open the **File Details** drawer on the right. It shows:
+Click a file to open a full preview. Use **Download** to save the original, **Fullscreen** to expand the preview, and **Close** to return to the list.
 
-- A preview of the file.
-- **Summary** — an AI-generated summary, created when the file finished processing. Spreadsheets and CSVs get a data-oriented summary covering columns, row counts, and sample values.
-- **Properties** — the file name, who uploaded it, and the upload date.
+The preview has its own link: copy the page URL while a preview is open and send it to a teammate to take them straight to that file. They still need access to the knowledge base to see it.
 
-You can resize the drawer by dragging its edge.
+<Note>
+On plans with advanced filters, the preview also shows a details panel with the file's **Summary**, who added it, its processing **Status**, the date it was added, its size, and extracted details such as **Category**, **Provider**, **Document date**, and **Coverage**.
+</Note>
 
-## File actions
+## Work with selected files
 
-Select one or more rows (or open the File Details drawer) to reveal action buttons. Each row also has a menu with the same actions. Availability depends on your role and access to the item:
+Check one or more rows to open a toolbar at the bottom of the page:
 
-| Action | Who can use it |
+| Action | What it does |
 |---|---|
-| **Open** / **Open in Browser** | Anyone with access |
-| **Download** | Anyone with access |
-| **Share/Access** | Organization admins with owner or editor access to the item |
-| **Rename** | Organization admins with owner or editor access, one file at a time |
-| **Delete** | In Organization Data: organization admins. In Personal Data: the item's owner or an editor |
+| **Chat with selected** | Starts a new chat scoped to the selected files and folders |
+| **Download** | Downloads the selected files |
+| **New folder with selected** | Creates a folder and moves the selection into it |
+| **Rename** | Renames the item (one item at a time) |
+| **Delete** | Deletes the selection |
+| **Move to…** | Moves the selection to another folder or knowledge base |
 
-## Sharing a file or folder
+Download and Chat with selected work for anyone who can see the files. The other actions need permission to change every selected item, and Rename, Move, and New folder are unavailable while a selected file is still processing.
 
-Select a single file or folder and click **Share/Access** to open the share dialog. From there you can:
+You can also move files by dragging rows onto a folder in the list.
 
-- **Switch between Private and Organization access.** Switching to Private revokes access from your organization; switching to Organization grants it. Merciv asks you to confirm either change. If the item sits inside a folder, changing its access also removes it from that parent folder.
-- **Grant individual users access.** The **Users with access** list shows who can see the item. Add people with read or edit access, change their level, or revoke access.
+## Move and rename knowledge bases
 
-## Deleting and the Archived tab
+From the Knowledge page, hover over a base's card and click **⋯** for **Rename**, **Move to…**, and **Delete**. Moving a base into another base turns it into a folder inside that base.
 
-Deleting asks for confirmation first. Deleting a folder also deletes everything inside it — Merciv warns you before proceeding.
+## Sharing a knowledge base
 
-Deleted items aren't destroyed immediately. They move to the **Archived** tab with a red **Archived** badge showing who deleted them and when.
+Access is set for the whole knowledge base — files and folders inside it follow the base. Click **Share** in the base's header to open the share dialog.
+
+- **Invite people.** Click **Add emails to invite people**, choose teammates, choose **View only** (viewer) or **Full access** (editor), and click **Invite**.
+- **Change or remove access.** In the list of people, change someone between **View only** and **Full access**, or choose **Remove access**. The base's creator is shown as **Owner**.
+- **Share with your organization.** Under **General access**, switch between **Only people invited** and **Anyone in the organization**. Making a base organization-wide replaces individual invitations with access for everyone. Switching back to **Only people invited** removes organization access, and you can then invite people individually.
+- **Copy link** copies a link to the base. People without access can't open it.
+
+To change sharing, you need to be an organization admin who either created the base or has **Full access** to it. Everyone else can open the dialog to see who has access, but can't change it.
+
+## Delete files, folders, and bases
+
+Select items and click **Delete**, or use **Delete** in a base's **⋮** menu. Merciv lists what will be deleted and asks you to confirm. Deleting a folder or base also deletes everything inside it.
 
 <Warning>
-There is no self-service restore for archived items. If you deleted something by mistake, contact your Merciv representative.
+Deleting can't be undone from the app. If you deleted something by mistake, email [hello@merciv.com](mailto:hello@merciv.com) as soon as possible.
 </Warning>
+
+Who can delete: the base's creator and people with **Full access**. In **Organization** bases, organization admins.

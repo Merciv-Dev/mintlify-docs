@@ -1,46 +1,70 @@
 ---
 title: "Portfolio"
-description: "Track your brands, products, and variants in one dashboard with metric widgets and time filters."
+description: "Track your brands, products, and variants in one place, with metric dashboards, time filters, and a guided brand setup."
 icon: "layout-dashboard"
 ---
 
 Portfolio is a dashboard for organizations that track a product portfolio. It organizes everything into a brand → product → variant hierarchy and pairs each level with dashboards of metric widgets, so you can see how your portfolio is performing in one place.
 
 <Note>
-Portfolio is available on select plans. If you don't see **Portfolio** in the sidebar, or it shows a lock icon, contact your Merciv representative to request access.
+Portfolio is available on select plans. If you don't see **Portfolio** in the sidebar, or it shows a lock icon, click **Request Access** on the Portfolio page or contact your Merciv representative.
 </Note>
 
 ## Browse your portfolio
 
-The left sidebar lists your **Brands**. Expand a brand to see its products, and a product to see its variants — counts appear as badges on each row. Use the search icon to search across brands, products, and variants by name.
+The left sidebar lists your **Brands**, each with its logo and a count badge. Expand a brand to see its products, and a product to see its variants. Click the search icon to search across brands, products, and variants by name — results show where each item sits in the hierarchy.
 
-Selecting a brand, product, or variant shows an overview card with its image, name, and key details. Click the card to open a detail panel where you can view the item's listings.
+Selecting a brand, product, or variant shows an overview card with its image, name, and key details:
 
-The top bar includes breadcrumbs and back/forward arrows that walk your navigation history within the page.
+- Click a **brand's** card to open **Manage brand**, with a **Catalog** tab for browsing the brand's products and listings and a **Sources** tab listing the retailers and sites its data comes from.
+- Click a **product's** or **variant's** card to open a detail panel listing its variants or listings.
+
+The top bar includes a button to hide the sidebar, breadcrumbs, and back/forward arrows that walk your navigation history within the page.
 
 ## Dashboards and time filters
 
 Each level of the hierarchy has its own dashboards, organized as tabs. A dashboard is a grid of widgets — bar, line, pie, radar, heatmap, table, single-metric, gauge, and more.
 
-Use the time-range filter to scope the data: **Past 30 days**, **Past 60 days**, **Past 90 days**, **Past 6 months**, or **Past year**.
+Use the time-range filter to scope the data: **Past 30 days**, **Past 60 days**, **Past 90 days**, **Past 6 months**, or **Past Year**.
 
-Users with portfolio management access see an edit button for modifying a dashboard's widgets.
+Users with portfolio management access can create dashboards with **+**, delete them from a tab's **...** menu, and change a dashboard's widgets with the edit button.
 
-## Add brands and listings
+## Add a brand
 
-Adding brands and listings requires portfolio management access, which is typically limited to organization admins. Users without it can browse the portfolio but won't see the create and edit controls.
+Adding and managing brands requires portfolio management access, which is limited to organization admins. Users without it can browse the portfolio but won't see the create and edit controls.
+
+Click **+** in the Brands sidebar and choose **Create brand**. A short guided setup walks you through the rest:
 
 <Steps>
   <Step title="Create a brand">
-    Click the **+** button in the Brands sidebar to open **Create New Brand**. Enter the brand name (required), an optional description, and store URLs.
+    Enter the **Brand name** (required) and the brand's **Website**, and choose your **Relationship** to the brand: **My brand**, **Client**, **Prospect**, **Competitor**, or **Reference**. Click **Create brand**.
   </Step>
-  <Step title="Wait for processing">
-    After you create the brand, Merciv gathers its information in the background. You'll see "Processing brand — We are processing the brand information. This may take a few minutes." Data appears in the portfolio once processing completes.
+  <Step title="Let Merciv enrich the profile">
+    If you added a website, Merciv builds the brand's profile from it. This takes a moment; click **Review** when it's ready.
   </Step>
-  <Step title="Add listings">
-    Select a brand, product, or variant, open its detail panel, and choose **Add New Listings**. Paste the product-page URLs — new listings are processed in the background and added shortly.
+  <Step title="Review and validate">
+    Check the enriched profile — description, categories, suggested competitors, social profiles, and brand narrative such as tagline, value proposition, tone and voice, audiences, and key messages. Adjust anything, then validate the brand to continue.
+  </Step>
+  <Step title="Confirm sources">
+    Merciv suggests the places the brand sells. Confirm the ones you want — nothing is collected until you do. You can also add a source yourself: choose **Amazon**, **Walmart**, **Target**, **Ulta Beauty**, **Sephora**, or **Brand website**, paste the storefront URL, and click **Add**.
+  </Step>
+  <Step title="Finish">
+    Each source gathers the brand's catalog and reviews once. While that runs, the portfolio shows "Processing brand — We are processing the brand information. This may take a few minutes." You can turn on ongoing collection later from the brand.
   </Step>
 </Steps>
+
+Your plan may limit how many brands your organization can add.
+
+## Manage a brand
+
+Portfolio managers can come back to a brand at any time:
+
+- **Review brand** — brands that are ready for review show a review button in the sidebar. Open it to edit the profile and validate the brand.
+- **Manage brand** — click the brand's overview card. On **Catalog**, browse, rename, or delete products and open their listings. On **Sources**, add or remove retailer storefronts and the brand's site. **Delete brand** removes the brand and everything attached to it, and can't be undone.
+
+## Add listings
+
+To add specific product pages, select a variant and open its detail panel, then click **New Listing**. In **Add New Listings**, choose the store, paste one or more product-page URLs, and click **Add New Listings**. New listings are processed in the background and added shortly.
 
 <Tip>
 If adding listings fails with "Please check the URLs and try again," confirm each URL is a complete product-page link for the store you selected.

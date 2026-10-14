@@ -1,0 +1,75 @@
+---
+title: "Edit artifacts"
+description: "Ask the assistant for changes, point at exactly what to change, edit Canvas dashboards in place, and restore earlier versions."
+icon: "pencil"
+---
+
+Every change to an artifact is saved as a new version of the same artifact, not a copy. You need **Full access** (Editor) or to be the owner to edit. If you have **View only** access, you can still ask the assistant questions about an artifact.
+
+## Edit through chat
+
+Click **Edit** in the artifact's top bar. The chat side panel opens with the artifact attached, so you can ask for changes like "shorten the executive summary" or "add a column for region."
+
+The assistant saves its edit as a new version of the artifact. A just-edited artifact can take a few seconds to show the new version.
+
+If the assistant saves the edit under a completely different file name, it may create a new artifact instead of a new version. Names that differ only in capitalization, spacing, or punctuation, or that add to the original name (such as "report" becoming "report-final"), still count as the same artifact.
+
+If you only have view access, the button reads **Ask** instead. It opens the same side panel so you can ask questions about the artifact.
+
+## Point at what to change with the smart bar
+
+<Note>
+The smart bar is available on select plans. Contact your Merciv representative if you don't see it.
+</Note>
+
+The smart bar floats at the bottom of the artifact. Use it to select exactly what you want changed, describe the change, and apply several changes at once.
+
+<Steps>
+  <Step title="Select what to change">
+    Select text in a document, click an image, or select cells, rows, or a range in a spreadsheet. On HTML pages and Canvas dashboards, click **Inspect elements** and then click the element you want. To capture part of the screen instead, click **Screenshot an area** and drag over it. You can attach up to six screenshots.
+  </Step>
+  <Step title="Describe the change">
+    Type what should change in the bar. To change the whole artifact, skip the selection and describe the change directly.
+  </Step>
+  <Step title="Queue it">
+    Press Enter or click **Add change**. Repeat for as many changes as you need. Click **Pending edits** to review your queued changes, remove one, or **Clear all**.
+  </Step>
+  <Step title="Apply">
+    Click **Apply changes**. Merciv sends all your queued changes to the assistant in the chat side panel, and the result is saved as a new version.
+  </Step>
+</Steps>
+
+## Edit a Canvas in place
+
+<Note>
+Canvas dashboards are available on select plans. Contact your Merciv representative if you don't see them.
+</Note>
+
+Editors and the owner see an **Edit** button on a Canvas dashboard. Click it to open the builder, make your changes, and click **Save**. Each save creates a new version. Click **Cancel** to discard your changes.
+
+If someone else or the assistant saves a newer version while you're editing, your save is rejected with "Canvas changed since you opened it." Reload the page to get the latest version, then re-apply your changes. Nothing is lost: earlier versions stay in the version history.
+
+## Version history and restore
+
+<Steps>
+  <Step title="Open the history">
+    Click the **Version history** (clock) icon in the top bar. Each version shows its number, when it was saved, and who saved it. A dot marks the current one. The list shows up to the 50 most recent versions.
+  </Step>
+  <Step title="View an older version">
+    Click a version. The page shows a "Viewing version N (read-only)" banner with **Restore** and **Back to current** buttons. Anyone with access can view older versions.
+  </Step>
+  <Step title="Restore it">
+    Click **Restore** (Editors and the owner). Restoring doesn't rewind history. It adds a new version that matches the one you picked, then returns you to the live artifact.
+  </Step>
+</Steps>
+
+## Related pages
+
+<CardGroup cols={2}>
+  <Card title="Artifacts" icon="layers" href="/artifacts/overview">
+    View, share, and manage artifacts.
+  </Card>
+  <Card title="Generated files" icon="file-output" href="/chat/generated-files">
+    How the assistant produces files in chat.
+  </Card>
+</CardGroup>

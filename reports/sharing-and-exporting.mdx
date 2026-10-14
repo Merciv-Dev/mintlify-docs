@@ -4,45 +4,53 @@ description: "Share reports with teammates, publish a public link, and export to
 icon: "share-2"
 ---
 
-Open the share dialog from the **Share** button in the report's top bar. The button is visible to users with edit or owner permission on the report.
+Open the share dialog from the **Share** button in the report's top bar, or from **Share** in the top bar's **...** menu. The button is visible to users with **Full access** (Editor) or Owner permission on the report.
 
 ## Share with teammates
 
-In the **Share with users** section, search for teammates in your organization and grant each one a role:
+<Steps>
+  <Step title="Start an invite">
+    In the share dialog, click **Add emails to invite people**.
+  </Step>
+  <Step title="Add people">
+    Type a teammate's name or email and pick them from the suggestions. You can also paste a list of emails. Only members of your organization can be invited.
+  </Step>
+  <Step title="Choose access and invite">
+    Choose **Full access** (Editor) or **View only** (Viewer), then click **Invite**. Each person gets a notification linking to the report.
+  </Step>
+</Steps>
 
-- **Can view** — read the report, but not edit or share it
-- **Can edit** — edit the report content and manage sharing
-- **Owner** — the report's creator; full control
+What each level allows:
 
-The access list below shows everyone with access and their role. Use it to change a role or remove someone's access. If someone's access is removed while they have the report open, they see a notice and are returned home.
+- **View only** (Viewer) — read and export the report, but not edit or share it
+- **Full access** (Editor) — edit the report, rename it, move it to a project, and manage sharing
+- **Owner** — the report's creator; full control, including delete
+
+The **People with access** list shows everyone who can open the report. Use the dropdown next to a person to switch between **Full access** and **View only**, or choose **Remove access**. If someone's access is removed while they have the report open, they see a notice and are returned home.
 
 <Note>
-Reports are shared per user or via the public link. There is no option to share a report with your entire organization at once.
+Reports are shared per person or via the public link. There is no option to share a report with your entire organization at once.
 </Note>
 
 ## Publish a public link
 
-The share dialog has a visibility selector:
+The **Public link** section of the share dialog has an **Anyone with the link** switch.
 
-- **Private** — only invited users can access the report
-- **Public** — anyone with the link can view the report
-
-Switching to **Public** generates a share link and shows "Report is now public." Copy the link with the copy button. Anyone who opens it can read the report without a Merciv account. Public visitors get read-only access to the report and the sources it cites; they can never edit.
-
-Switching back to **Private** shows "Report is now private — The public link no longer grants access." Old links stop working immediately.
+- Turn it on to publish the report. You'll see "Report is now public." Click **Copy link** at the bottom of the dialog to copy the public link. Anyone who opens it can read the report without a Merciv account. Public visitors get read-only access to the report and the sources it cites; they can never edit.
+- Turn it off to make the report private again. You'll see "Report is now private — The public link no longer grants access." The link stops working immediately.
 
 <Warning>
-Turning a report private revokes the public link for everyone, instantly. If you make it public again later, a new link may be issued, so previously shared links may no longer work. Re-share the current link to be safe.
+Turning off the public link revokes it for everyone, instantly. If you turn it back on later, Merciv issues a new link — the old one never works again. Re-share the new link with anyone who needs it.
 </Warning>
 
 ## Export to PDF or Word
 
-From the download button in the report's top bar, choose:
+Click the download icon in the report's top bar and choose:
 
 - **PDF** — you'll see "PDF Exported!" when it completes
 - **Word Doc** — you'll see "Report Exported!" when it completes
 
-Exports include the current document content.
+Anyone who can open the report can export it. Exports include the current document content.
 
 <Tip>
 If an export fails, try the other format. Very large or unusually formatted documents occasionally fail in one format but succeed in the other.

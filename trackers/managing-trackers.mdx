@@ -6,17 +6,24 @@ icon: "settings-2"
 
 Once a tracker exists, you manage it from its card on the Trackers page or from its detail page. If you haven't created one yet, start with the [Trackers overview](/trackers/overview).
 
+- On a **card**, the **...** menu offers **Edit**, **Pause** (or **Resume**), **Run Now**, and **Archive**.
+- On the **tracker page**, **Run Now** is a button in the header, and the **...** menu next to it offers **Edit**, **Pause** (or **Resume**), and **Archive**.
+
 ## Run a tracker now
 
-Click **Run Now** — in the tracker page header, or from the **...** menu on the tracker's card — to trigger an immediate run without waiting for the schedule. You'll see a "Story generation triggered" confirmation, a **Running** row appears in the timeline, and the page updates automatically as results come in.
+Click **Run Now** to trigger an immediate run without waiting for the schedule. You'll see a "Story generation triggered" confirmation, a **Running** row appears in the timeline, and the page updates automatically as results come in. Run Now works on paused trackers too.
 
-Runs happen in the background and can take a few minutes. If nothing appears right away, check the run row's status before retrying — the run may still be in progress, or it may have finished with nothing new to report (see **Skipped** below).
+Runs happen in the background and can take a few minutes — longer for broad topics. If nothing appears right away, check the run row's status before retrying: the run may still be in progress, or it may have finished with nothing new to report (see **Skipped** below). If a run takes a long time, refresh the page to see the latest results.
 
-Scheduled trackers run automatically at their configured time; runs fire on the hour and half-hour in the tracker's timezone, which is why schedule times are offered in 30-minute increments.
+Scheduled trackers run automatically at their configured time. Runs fire on the hour and half-hour in the tracker's timezone, which is why schedule times are offered in 30-minute increments.
+
+<Tip>
+  A monthly tracker set to the 29th, 30th, or 31st skips months that don't have that day. Pick a day between 1 and 28 to run every month.
+</Tip>
 
 ## The run timeline
 
-The tracker page shows a reverse-chronological feed grouped by day ("Today", "Yesterday", and dates). Each run appears as a row with a status pill:
+The tracker page shows a reverse-chronological feed grouped by day ("Today", "Yesterday", then dates). Each run appears as a row with its start time and a status pill:
 
 | Status | Meaning |
 |---|---|
@@ -26,7 +33,7 @@ The tracker page shows a reverse-chronological feed grouped by day ("Today", "Ye
 | **Skipped** | The run finished without new content. Hover the pill for the reason. |
 | **Failed** | The run produced nothing. Hover the pill for the reason. |
 
-Stories produced by a run appear as clickable items in the same feed.
+Stories produced by a run appear as clickable items in the same feed. Scroll down to load older runs and stories.
 
 <Note>
   **Skipped is not an error.** It means the run found no genuinely new material for the period — either no new topics surfaced, or every candidate overlapped with stories the tracker already published. Deduplication is working as intended. If a tracker skips often, try broadening the topic, adding sources, or lowering the frequency.
@@ -34,7 +41,7 @@ Stories produced by a run appear as clickable items in the same feed.
 
 ## Pause and resume
 
-**Pause** (from the **...** menu) stops scheduled runs; the tracker's status pill changes from **Active** (green) to **Paused** (grey), and it won't generate stories until resumed. **Resume** re-activates it, and it picks up again on its next scheduled run.
+**Pause** stops scheduled runs. The tracker's status pill changes from **Active** (green) to **Paused** (grey), and it won't generate stories on its schedule until resumed. **Resume** re-activates it, and it picks up again on its next scheduled run.
 
 ## Edit a tracker
 
@@ -45,23 +52,31 @@ Organization admins can also convert a tracker between personal and organization
 - **To organization:** every story it has generated becomes visible to everyone in your organization.
 - **To personal:** organization-wide access is removed from every story it has generated.
 
-A warning banner in the form spells out the consequence before you confirm. Story visibility always matches the tracker's scope.
+A warning banner in the form spells out the consequence before you save. Story visibility always matches the tracker's scope.
 
 ## Archive and restore
 
-**Archive** moves a tracker to the **Archived** tab after a confirmation dialog. Archived trackers stop running but keep their history.
+**Archive** moves a tracker to the **Archived** tab after a confirmation dialog. Archived trackers stop running.
 
 <Warning>
-  Archived trackers are permanently deleted after 30 days. Until then, you can bring one back with **Restore** from the archived card's menu.
+  Archived trackers are permanently deleted after 30 days. Until then, you can bring one back with **Restore** from the archived card's **...** menu.
 </Warning>
+
+## New story emails
+
+Depending on your plan and notification settings, you may receive an email with a **Read Story** link each time one of your trackers publishes a story. Stories from organization trackers can notify everyone in the organization.
+
+<Note>
+  Story email notifications are available on select plans. Contact your Merciv representative if you aren't receiving them.
+</Note>
 
 ## Tracker limits
 
-The number of trackers you can create depends on your organization's plan. When you reach the limit, creating another tracker shows an upgrade dialog ("You're tracking as much as this plan allows"). Archive trackers you no longer need, or contact your Merciv representative about your plan.
+The number of trackers you can have depends on your organization's plan. When you reach the limit, creating another tracker — including from chat — shows an upgrade dialog ("You're tracking as much as this plan allows"). Archived trackers don't count toward the limit, so archive trackers you no longer need, or contact your Merciv representative about your plan.
 
 ## Permissions
 
-- You can only run, edit, pause, or archive trackers you own. Personal trackers are private to their creator.
-- Organization trackers can be managed only by organization admins.
+- Personal trackers are private to their creator — only you can run, edit, pause, or archive them.
+- Organization trackers can be viewed and managed only by organization admins.
 
 See [Sharing and permissions](/getting-started/sharing-and-permissions) for how story visibility works across the platform.
